@@ -201,6 +201,7 @@ namespace AplicacionNomina
                         return false;
 
 
+
                     }
                     string tipoCuenta = drow[4].ToString();
 
