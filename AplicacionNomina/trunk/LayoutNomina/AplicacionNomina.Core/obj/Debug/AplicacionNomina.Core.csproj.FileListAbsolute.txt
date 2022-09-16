@@ -1,0 +1,18 @@
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\AplicacionNomina.Core\bin\Debug\AplicacionNomina.Core.dll
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\AplicacionNomina.Core\bin\Debug\AplicacionNomina.Core.pdb
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\AplicacionNomina.Core\obj\Debug\AplicacionNomina.Core.csproj.CoreCompileInputs.cache
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\AplicacionNomina.Core\obj\Debug\AplicacionNomina.Core.dll
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\AplicacionNomina.Core\obj\Debug\AplicacionNomina.Core.pdb
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\AplicacionNomina.Core\obj\Debug\AplicacionNomina.Core.csproj.AssemblyReference.cache
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNomina.Core\obj\Debug\AplicacionNomina.Core.csproj.CoreCompileInputs.cache
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNomina.Core\obj\Debug\AplicacionNomina.Core.dll
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNomina.Core\obj\Debug\AplicacionNomina.Core.pdb
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNomina.Core\bin\Debug\AplicacionNomina.Core.dll
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNomina.Core\bin\Debug\AplicacionNomina.Core.pdb
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNomina.Core\obj\Debug\AplicacionNomina.Core.csprojAssemblyReference.cache
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNomina.Core\bin\Debug\AplicacionNomina.Core.dll.config
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNomina.Core\bin\Debug\EntityFramework.dll
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNomina.Core\bin\Debug\EntityFramework.SqlServer.dll
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNomina.Core\bin\Debug\EntityFramework.xml
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNomina.Core\bin\Debug\EntityFramework.SqlServer.xml
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNomina.Core\obj\Debug\AplicacionNomina.Core.csproj.CopyComplete

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BANESCO_DEVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="IndicatorBank">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IndicatorName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IndicatorCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="RegUser" Type="varchar" MaxLength="90" Nullable="false" />
+    <Property Name="RegDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RedACH">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Entidad" Type="varchar" MaxLength="400" Nullable="false" />
+    <Property Name="RouteAndTransitCheckDigit" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Currency" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegUser" Type="varchar" MaxLength="90" Nullable="false" />
+    <Property Name="RegDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RedLBTR">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BankName" Type="varchar" MaxLength="400" Nullable="false" />
+    <Property Name="SwiftCode" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="RegUser" Type="varchar" MaxLength="90" Nullable="false" />
+    <Property Name="RegDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="BANESCO_DEVModelStoreContainer">
+    <EntitySet Name="IndicatorBank" EntityType="Self.IndicatorBank" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RedACH" EntityType="Self.RedACH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RedLBTR" EntityType="Self.RedLBTR" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

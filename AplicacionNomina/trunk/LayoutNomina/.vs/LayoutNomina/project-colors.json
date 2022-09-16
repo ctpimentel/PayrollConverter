@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "cf33b088-fec4-4d94-93d3-72b9c9bf5525": {
+      "ProjectGuid": "cf33b088-fec4-4d94-93d3-72b9c9bf5525",
+      "DisplayName": "AplicacionNomina.Core",
+      "ColorIndex": 0
+    },
+    "e4156e08-79cb-42c8-9c1b-bb16c0ddffd2": {
+      "ProjectGuid": "e4156e08-79cb-42c8-9c1b-bb16c0ddffd2",
+      "DisplayName": "AplicacionNomina",
+      "ColorIndex": 1
+    },
+    "1e7bbd4b-6ea1-455a-be2f-5cc91bd6f47b": {
+      "ProjectGuid": "1e7bbd4b-6ea1-455a-be2f-5cc91bd6f47b",
+      "DisplayName": "AplicacionNominaWPF",
+      "ColorIndex": 2
+    },
+    "79995387-ef63-432c-99a2-fb8d47327714": {
+      "ProjectGuid": "79995387-ef63-432c-99a2-fb8d47327714",
+      "DisplayName": "ConsoleApplication1",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}

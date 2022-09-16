@@ -1,0 +1,12 @@
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojAssemblyReference.cache
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.CoreCompileInputs.cache
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.CoreCompileInputs.cache
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojAssemblyReference.cache

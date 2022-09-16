@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BANESCO_DEVModelStoreContainer" CdmEntityContainer="BANESCO_DEVEntities">
+    <EntitySetMapping Name="RedACHes">
+      <EntityTypeMapping TypeName="BANESCO_DEVModel.RedACH">
+        <MappingFragment StoreEntitySet="RedACH">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Entidad" ColumnName="Entidad" />
+          <ScalarProperty Name="RouteAndTransitCheckDigit" ColumnName="RouteAndTransitCheckDigit" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="RegUser" ColumnName="RegUser" />
+          <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RedLBTRs">
+      <EntityTypeMapping TypeName="BANESCO_DEVModel.RedLBTR">
+        <MappingFragment StoreEntitySet="RedLBTR">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="SwiftCode" ColumnName="SwiftCode" />
+          <ScalarProperty Name="RegUser" ColumnName="RegUser" />
+          <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

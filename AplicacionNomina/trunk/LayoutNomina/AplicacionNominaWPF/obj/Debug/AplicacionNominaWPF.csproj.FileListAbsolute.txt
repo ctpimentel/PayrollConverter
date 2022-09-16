@@ -1,0 +1,55 @@
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\CustomPopup.baml
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\MainWindow.baml
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\App.baml
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\CustomPopup.g.cs
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\MainWindow.g.cs
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\App.g.cs
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\AplicacionNominaWPF_MarkupCompile.cache
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\AplicacionNominaWPF.g.resources
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\AplicacionNominaWPF.Properties.Resources.resources
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\AplicacionNominaWPF.csproj.GenerateResource.cache
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\AplicacionNominaWPF.csproj.CoreCompileInputs.cache
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\AplicacionNominaWPF.exe
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\AplicacionNominaWPF.pdb
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\AplicacionNominaWPF.csproj.AssemblyReference.cache
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\AplicacionNominaWPF.exe.config
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\AplicacionNominaWPF.exe.manifest
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\AplicacionNominaWPF.application
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\AplicacionNominaWPF.exe
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\AplicacionNominaWPF.pdb
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\AplicacionNomina.Core.dll
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\WpfAnimatedGif.dll
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\AplicacionNomina.Core.pdb
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\WpfAnimatedGif.xml
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\AplicacionNominaWPF.exe.manifest
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\AplicacionNominaWPF.application
+C:\Developers\SVN\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\AplicacionNominaWPF.csproj.CopyComplete
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\AplicacionNominaWPF.exe.config
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\AplicacionNominaWPF.exe.manifest
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\AplicacionNominaWPF.application
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\AplicacionNominaWPF.exe
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\AplicacionNominaWPF.pdb
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\AplicacionNomina.Core.dll
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\WpfAnimatedGif.dll
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\AplicacionNomina.Core.pdb
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\WpfAnimatedGif.xml
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\CustomPopup.baml
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\MainWindow.baml
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\App.baml
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\CustomPopup.g.cs
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\MainWindow.g.cs
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\App.g.cs
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\AplicacionNominaWPF_MarkupCompile.cache
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\AplicacionNominaWPF.g.resources
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\AplicacionNominaWPF.Properties.Resources.resources
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\AplicacionNominaWPF.csproj.GenerateResource.cache
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\AplicacionNominaWPF.csproj.CoreCompileInputs.cache
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\AplicacionNominaWPF.exe.manifest
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\AplicacionNominaWPF.application
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\AplicacionNominaWPF.csproj.CopyComplete
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\AplicacionNominaWPF.exe
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\AplicacionNominaWPF.pdb
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\AplicacionNominaWPF.csprojAssemblyReference.cache
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\EntityFramework.dll
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\AplicacionNomina.Core.dll.config
+C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\EntityFramework.xml

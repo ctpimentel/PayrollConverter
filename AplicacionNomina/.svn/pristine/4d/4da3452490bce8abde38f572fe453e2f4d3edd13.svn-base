@@ -1,0 +1,44 @@
+﻿<Window x:Class="AplicacionNominaWPF.CustomPopup"
+        x:Name="CustomPopupWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="CustomPopup" WindowStartupLocation="CenterScreen" Height="200" Width="500"
+         ResizeMode="NoResize" Icon="Images/logoBanescoColor.png">
+    <Grid>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/logoBanescoGrande.png">
+                <ImageBrush.Transform>
+                    <TransformGroup>
+                        <TranslateTransform X="350" Y="-20"></TranslateTransform>
+                        <ScaleTransform ScaleX="0.7" ScaleY="1.4"></ScaleTransform>
+                    </TransformGroup>
+                </ImageBrush.Transform>
+            </ImageBrush>
+        </Grid.Background>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="130*"  />
+            <ColumnDefinition Width="265*" />
+            <ColumnDefinition Width="197*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="53*"  />
+            <RowDefinition Height="67*"  />
+            <RowDefinition Height="52*"  />
+        </Grid.RowDefinitions>
+        
+        <TextBlock Margin="30,0,0,0" Grid.RowSpan="1" Grid.Column="0" Grid.Row="1">
+            <Image x:Name="imgIcono" Source="Images/iconError.png" Width="75" Height="66"></Image>
+        </TextBlock>
+
+        <TextBlock FontSize="15" Margin="0,17,11,0" TextWrapping="Wrap" x:Name="lblMensaje" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="1">            
+         Archivo nómina o proveedores exportado
+        </TextBlock>
+
+        <Button Foreground="White" x:Name="btnAceptar" Click="btnAceptar_Click_1" Margin="66,0,11,10" Grid.Column="2" Grid.Row="2" Width="Auto" Height="30" VerticalAlignment="Bottom">
+            <TextBlock>Aceptar</TextBlock>
+        </Button>
+        
+    </Grid>
+</Window>

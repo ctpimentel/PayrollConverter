@@ -1,0 +1,99 @@
+﻿
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+
+namespace AplicacionNomina
+{
+   public class ValidarExcel
+    {
+       RepositorioBanco repo = new RepositorioBanco();
+       public string MensajeError { get; private set; }
+
+        public bool Validar(DataTable dt, string moneda)
+        {
+
+            int limiteCaracteresCuenta = 17;
+            int limiteCaracteresNombreCliente = 30;
+            decimal montoLimite = 999999999999m;
+            foreach (DataRow drow in dt.Rows)
+            {
+                decimal monto;
+                if (!decimal.TryParse(drow[4].ToString(), out monto))
+                {
+                    // Existe un monto que no es un número válido.
+                    MensajeError = string.Format("El monto {0} no tiene formato correcto", drow[4].ToString());
+                    return false;
+                }
+
+                long codigoBanco;
+                if (!long.TryParse(drow[2].ToString(), out codigoBanco))
+                {
+                    // Existe un código de banco que no es un número válido.
+                    MensajeError = string.Format("Código de banco {0} tiene formato incorrecto", drow[2].ToString());
+                    return false;
+                }
+                else
+                {
+                    if (!ValidarCodigoBanco(codigoBanco, moneda))
+                    {
+                        MensajeError = string.Format("El código de banco {0} no existe en nuestro sistema", codigoBanco);
+                        return false;
+                    }
+                }
+
+                // valido longitudes máximas de los campos
+
+                string numeroCuenta = drow[0].ToString();
+
+                if (numeroCuenta.Length > limiteCaracteresCuenta)
+                {
+                    MensajeError = string.Format("El código de cuenta {0} excede el máximo permitido de caracteres", numeroCuenta);
+                    return false;
+                }
+
+                string nombreCliente = drow[1].ToString();
+
+                if (nombreCliente.Length > limiteCaracteresNombreCliente)
+                {
+                    MensajeError = string.Format("El nombre {0} excede el máximo permitido de caracteres", nombreCliente);
+                    return false;
+                }
+
+                string tipoCuenta = drow[3].ToString();
+
+                if (tipoCuenta.Length > 1)                
+                {
+                    MensajeError = string.Format("El tipo cuenta {0} excede el máximo permitido de caracteres", tipoCuenta);
+                    return false;
+                }
+
+                if (monto > montoLimite)
+                {
+                    MensajeError = string.Format("El monto {0} excede el monto máximo permitido", monto);
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        private bool ValidarCodigoBanco(long codigoBanco, string moneda)
+        {
+            var existe = false;
+
+            if (moneda == "DOP")
+            {
+                existe = repo.BancosPesos.Contains(codigoBanco);
+            }
+            else
+            {
+                existe = repo.BancosDolares.Contains(codigoBanco);
+            }
+
+            return existe;
+        }
+    }
+}
