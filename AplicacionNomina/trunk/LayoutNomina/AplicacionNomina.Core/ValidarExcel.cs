@@ -200,6 +200,7 @@ namespace AplicacionNomina
                         MensajeError = string.Format("El Nombre del Beneficiario {0} no debe tener caracteres expeciales", nombreCliente);
                         return false;
 
+
                     }
                     string tipoCuenta = drow[4].ToString();
 

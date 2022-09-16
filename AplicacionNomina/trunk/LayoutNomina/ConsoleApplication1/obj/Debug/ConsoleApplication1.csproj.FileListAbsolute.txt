@@ -10,3 +10,9 @@ C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNom
 C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
 C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
 C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojAssemblyReference.cache
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojAssemblyReference.cache
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.CoreCompileInputs.cache
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
