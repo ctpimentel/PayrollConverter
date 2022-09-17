@@ -128,7 +128,7 @@ namespace AplicacionNomina
                     if (string.IsNullOrEmpty(DescriptionEntity))
                     {
                         // Existe un monto que no es un número válido.
-                        MensajeError = string.Format("Banco Destino   {0} no puedee star en blanco", drow[4].ToString());
+                        MensajeError = string.Format("Banco Destino no puedee estar en blanco ,favor revisar");
                         return false;
                     }
                     var indicatorBank = new CIndicatorBank();
@@ -195,11 +195,11 @@ namespace AplicacionNomina
                         MensajeError = string.Format("El Nombre del Beneficiario {0} excede el máximo permitido de caracteres", nombreCliente);
                         return false;
                     }
-                    if (!Regex.IsMatch(nombreCliente, @"[^A-Za-z0-9]"))
+                    
+                    if (!Regex.IsMatch(nombreCliente.Trim(), @"^[a-zA-Z0-9_\s]*$"))
                     {
                         MensajeError = string.Format("El Nombre del Beneficiario {0} no debe tener caracteres expeciales", nombreCliente);
                         return false;
-
 
 
                     }
@@ -258,7 +258,7 @@ namespace AplicacionNomina
                         {
                             var paymentExecutionday = int.Parse(PaymentExecutionDate.Split('/')[0]);
                             var paymentExecutionMonth = int.Parse(PaymentExecutionDate.Split('/')[1]);
-                            var paymentExecutionYear = int.Parse(PaymentExecutionDate.Split('/')[2]);                         
+                            var paymentExecutionYear = int.Parse(PaymentExecutionDate.Split('/')[2]);
                             DateTime dateExecutionConvert = new DateTime(paymentExecutionYear, paymentExecutionMonth, paymentExecutionday);
                             if (dateExecutionConvert < DateTime.Now)
                             {
