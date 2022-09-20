@@ -124,13 +124,17 @@ namespace AplicacionNomina
                     var channelTypeEnumValue = enChannelType.AACH.ToString();
                     var DescriptionEntity = drow[3].ToString();
 
-
                     if (string.IsNullOrEmpty(DescriptionEntity))
                     {
                         // Existe un monto que no es un número válido.
                         MensajeError = string.Format("Banco Destino no puedee estar en blanco ,favor revisar");
                         return false;
                     }
+                    //if (!Regex.IsMatch(DescriptionEntity.Trim(), @"^[a-zA-Z0-9\s]*$"))
+                    //{
+                    //    MensajeError = string.Format("Banco Destino no puedee estar en blanco ,favor revisar");
+                    //    return false;
+                    //}
                     var indicatorBank = new CIndicatorBank();
                     var accountTypeResult = indicatorBank.cExistIndicatorDescription(channelType);
                     if (!accountTypeResult.IsValid)
@@ -175,10 +179,14 @@ namespace AplicacionNomina
                         MensajeError = string.Format("El No.de Cuenta Beneficiario  {0} no puede estar en blanco", numeroCuenta);
                         return false;
                     }
-
                     if (numeroCuenta.Length > limiteCaracteresCuenta)
                     {
                         MensajeError = string.Format("El código de cuenta {0} excede el máximo permitido de caracteres", numeroCuenta);
+                        return false;
+                    }
+                    if (!Regex.IsMatch(numeroCuenta.Trim(), @"^[a-zA-Z0-9]*$"))
+                    {
+                        MensajeError = string.Format("El No.de Cuenta Beneficiario  {0} no puede tener caracteres especiales", numeroCuenta);
                         return false;
                     }
 
@@ -195,8 +203,8 @@ namespace AplicacionNomina
                         MensajeError = string.Format("El Nombre del Beneficiario {0} excede el máximo permitido de caracteres", nombreCliente);
                         return false;
                     }
-                    
-                    if (!Regex.IsMatch(nombreCliente.Trim(), @"^[a-zA-Z0-9_\s]*$"))
+
+                    if (!Regex.IsMatch(nombreCliente.Trim(), @"^[a-zA-Z0-9\s]*$"))//FALTA TRABAJAR LO DEL UNDERSCORE QUITARLO
                     {
                         MensajeError = string.Format("El Nombre del Beneficiario {0} no debe tener caracteres expeciales", nombreCliente);
                         return false;
@@ -288,6 +296,12 @@ namespace AplicacionNomina
                         if (string.IsNullOrEmpty(DescriptionDebit))
                         {
                             MensajeError = string.Format("Descripción del Débito no puede estar en blanco al igual que todas las informaciones del header");
+                            return false;
+                        }
+
+                        if (!Regex.IsMatch(DescriptionDebit.Trim(), @"^[a-zA-Z0-9\s]*$"))
+                        {
+                            MensajeError = string.Format("Descripción del Débito no permite caracteres especiales al igual que todas las informaciones del header");
                             return false;
                         }
 

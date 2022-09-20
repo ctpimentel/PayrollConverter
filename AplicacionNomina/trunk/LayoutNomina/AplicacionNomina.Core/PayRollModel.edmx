@@ -5,16 +5,6 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="BANESCO_DEVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="IndicatorBank">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="IndicatorName" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="IndicatorCode" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="RegUser" Type="varchar" MaxLength="90" Nullable="false" />
-          <Property Name="RegDate" Type="datetime" Nullable="false" />
-        </EntityType>
         <EntityType Name="RedACH">
           <Key>
             <PropertyRef Name="Id" />
@@ -37,7 +27,6 @@
           <Property Name="RegDate" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityContainer Name="BANESCO_DEVModelStoreContainer">
-          <EntitySet Name="IndicatorBank" EntityType="Self.IndicatorBank" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="RedACH" EntityType="Self.RedACH" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="RedLBTR" EntityType="Self.RedLBTR" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
@@ -69,18 +58,7 @@
         <EntityContainer Name="BANESCO_DEVEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="RedACHes" EntityType="Self.RedACH" />
           <EntitySet Name="RedLBTRs" EntityType="Self.RedLBTR" />
-          <EntitySet Name="IndicatorBanks" EntityType="BANESCO_DEVModel.IndicatorBank" />
         </EntityContainer>
-        <EntityType Name="IndicatorBank">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="IndicatorName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="IndicatorCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="RegUser" Type="String" Nullable="false" MaxLength="90" FixedLength="false" Unicode="false" />
-          <Property Name="RegDate" Type="DateTime" Nullable="false" Precision="3" />
-        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -107,17 +85,6 @@
                 <ScalarProperty Name="SwiftCode" ColumnName="SwiftCode" />
                 <ScalarProperty Name="RegUser" ColumnName="RegUser" />
                 <ScalarProperty Name="RegDate" ColumnName="RegDate" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="IndicatorBanks">
-            <EntityTypeMapping TypeName="BANESCO_DEVModel.IndicatorBank">
-              <MappingFragment StoreEntitySet="IndicatorBank">
-                <ScalarProperty Name="RegDate" ColumnName="RegDate" />
-                <ScalarProperty Name="RegUser" ColumnName="RegUser" />
-                <ScalarProperty Name="IndicatorCode" ColumnName="IndicatorCode" />
-                <ScalarProperty Name="IndicatorName" ColumnName="IndicatorName" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
