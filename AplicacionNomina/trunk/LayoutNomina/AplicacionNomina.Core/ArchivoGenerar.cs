@@ -45,10 +45,19 @@ namespace AplicacionNomina
             var montoTotal = 0m;
             var archivo = new ArchivoAGenerar();
 
+            var index = 0;
             foreach (DataRow drow in dt.Rows)
             {
-                montoTotal += decimal.Parse(drow[4].ToString());
-                archivo.AsignarDetalle(drow, moneda);
+                if (index > 4)
+                {
+                    montoTotal += decimal.Parse(drow[5].ToString());
+                    archivo.AsignarDetalle(drow, moneda);
+                }
+                else
+                {
+                    index++;
+                }
+                
             }
 
             archivo.Total = montoTotal;

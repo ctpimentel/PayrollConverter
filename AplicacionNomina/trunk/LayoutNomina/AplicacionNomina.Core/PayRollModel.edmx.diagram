@@ -7,6 +7,7 @@
       <Diagram DiagramId="eaffa82bded9480da30203ccac158fdf" Name="Diagram1">
         <EntityTypeShape EntityType="BANESCO_DEVModel.RedACH" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="BANESCO_DEVModel.RedLBTR" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BANESCO_DEVModel.IndicatorBank" Width="1.5" PointX="0.75" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
