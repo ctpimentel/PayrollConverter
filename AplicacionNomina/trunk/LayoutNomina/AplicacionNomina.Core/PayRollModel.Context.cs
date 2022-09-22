@@ -28,5 +28,7 @@ namespace AplicacionNomina.Core
         public virtual DbSet<RedACH> RedACHes { get; set; }
         public virtual DbSet<RedLBTR> RedLBTRs { get; set; }
         public virtual DbSet<IndicatorBank> IndicatorBanks { get; set; }
+        public virtual DbSet<AccountType> AccountTypes { get; set; }
+        public virtual DbSet<TransactionConvert> TransactionConverts { get; set; }
     }
 }

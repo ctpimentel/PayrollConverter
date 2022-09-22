@@ -25,6 +25,8 @@
     <EntitySet Name="RedACHes" EntityType="Self.RedACH" />
     <EntitySet Name="RedLBTRs" EntityType="Self.RedLBTR" />
     <EntitySet Name="IndicatorBanks" EntityType="BANESCO_DEVModel.IndicatorBank" />
+    <EntitySet Name="AccountTypes" EntityType="BANESCO_DEVModel.AccountType" />
+    <EntitySet Name="TransactionConverts" EntityType="BANESCO_DEVModel.TransactionConvert" />
   </EntityContainer>
   <EntityType Name="IndicatorBank">
     <Key>
@@ -33,6 +35,30 @@
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="IndicatorName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="IndicatorCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RegUser" Type="String" Nullable="false" MaxLength="90" FixedLength="false" Unicode="false" />
+    <Property Name="RegDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="AccountType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="RegUser" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RegDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="TransactionConvert">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Code" />
+      <PropertyRef Name="Description" />
+      <PropertyRef Name="RegUser" />
+      <PropertyRef Name="RegDate" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
     <Property Name="RegUser" Type="String" Nullable="false" MaxLength="90" FixedLength="false" Unicode="false" />
     <Property Name="RegDate" Type="DateTime" Nullable="false" Precision="3" />
   </EntityType>

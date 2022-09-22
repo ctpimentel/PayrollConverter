@@ -109,7 +109,7 @@ namespace AplicacionNomina
                     if (!decimal.TryParse(drow[5].ToString(), out monto))
                     {
                         // Existe un monto que no es un número válido.
-                        MensajeError = string.Format("El monto {0} no tiene formato correcto", drow[4].ToString());
+                        MensajeError = string.Format("El monto {0} no tiene formato correcto", drow[5].ToString());
                         return false;
                     }
                     var channelType = drow[2].ToString().Trim();
@@ -121,20 +121,21 @@ namespace AplicacionNomina
                         MensajeError = string.Format("Indicador de Banco   {0} no puede estar en blanco", channelType);
                         return false;
                     }
-                    var channelTypeEnumValue = enChannelType.AACH.ToString();
-                    var DescriptionEntity = drow[3].ToString();
+                    //var identification = drow[6].ToString();
+                    //if (string.IsNullOrEmpty(identification.Trim()))
+                    //{                       
+                    //    // Existe un monto que no es un número válido.
+                    //    MensajeError = string.Format("Identificación no puede estar en blanco");
+                    //    return false;
+                    //}
 
-                    if (string.IsNullOrEmpty(DescriptionEntity))
-                    {
-                        // Existe un monto que no es un número válido.
-                        MensajeError = string.Format("Banco Destino no puedee estar en blanco ,favor revisar");
-                        return false;
-                    }
+                    var channelTypeEnumValue = enChannelType.AACH.ToString();
                     //if (!Regex.IsMatch(DescriptionEntity.Trim(), @"^[a-zA-Z0-9\s]*$"))
                     //{
                     //    MensajeError = string.Format("Banco Destino no puedee estar en blanco ,favor revisar");
                     //    return false;
                     //}
+
                     var indicatorBank = new CIndicatorBank();
                     var accountTypeResult = indicatorBank.cExistIndicatorDescription(channelType);
                     if (!accountTypeResult.IsValid)
@@ -143,6 +144,15 @@ namespace AplicacionNomina
                         return false;
                     }
                     channelType = channelType.Replace("-", "");
+
+                    var DescriptionEntity = drow[3].ToString();
+
+                    if (string.IsNullOrEmpty(DescriptionEntity))
+                    {
+                        // Existe un monto que no es un número válido.
+                        MensajeError = string.Format("Banco Destino no puedee estar en blanco ,favor revisar");
+                        return false;
+                    }
                     if (channelType == enChannelType.LLBTR.ToString() || channelType == enChannelType.AACH.ToString())
                     {
                         if (channelType == channelTypeEnumValue && moneda != enCurrency.DOP.ToString())
@@ -154,20 +164,37 @@ namespace AplicacionNomina
                         var payRollValidate = new CPayRollValidate();
                         if (channelType == enChannelType.LLBTR.ToString())
                         {
-                            var resultlbtr = payRollValidate.cExistLBTRDescription(DescriptionEntity);
+                            var resultlbtr = payRollValidate.cGetLBTRDescription(DescriptionEntity);
                             if (!resultlbtr.IsValid)
                             {
                                 MensajeError = string.Format("Favor verificar este  Banco Destino   {0} tiene formato incorrecto", DescriptionEntity + " detalle: " + resultlbtr.Mensaje);
                                 return false;
                             }
+                            else
+                            {
+                                if (resultlbtr.Mensaje.Length > 12)
+                                {
+                                    MensajeError = string.Format("El codigo swift asociado a este  Banco Destino   {0} tiene formato incorrecto", DescriptionEntity + " es mayor de 12 posiciones, favor arreglar: " + resultlbtr.Mensaje);
+                                    return false;
+                                }
+
+                            }
                         }
                         else
                         {
-                            var resultlbtr = payRollValidate.cExistACHDescription(DescriptionEntity);
+                            var resultlbtr = payRollValidate.cGetACHDescription(DescriptionEntity);
                             if (!resultlbtr.IsValid)
                             {
                                 MensajeError = string.Format("Favor verificar este  Banco Destino   {0} tiene formato incorrecto", DescriptionEntity + " detalle: " + resultlbtr.Mensaje);
                                 return false;
+                            }
+                            else
+                            {
+                                if (resultlbtr.Mensaje.Length > 12)
+                                {
+                                    MensajeError = string.Format("RUTA Y TRANSITO O DIGITO DE CHEQUEO asociado a este  Banco Destino   {0} tiene formato incorrecto", DescriptionEntity + " es mayor de 12 posiciones , el cual es {1}: " + resultlbtr.Mensaje);
+                                    return false;
+                                }
                             }
                         }
                     }
@@ -233,7 +260,13 @@ namespace AplicacionNomina
                         MensajeError = string.Format("El monto {0} excede el monto máximo permitido", monto);
                         return false;
                     }
-                    var identification = drow[5].ToString();
+
+                    if (drow[5].ToString().Length > 12)
+                    {
+                        MensajeError = string.Format("El monto {0} excede la cantidad de posiciones permitidas ", monto);
+                        return false;
+                    }
+                    var identification = drow[6].ToString();
 
                     if (string.IsNullOrEmpty(identification))
                     {
@@ -268,7 +301,7 @@ namespace AplicacionNomina
                             var paymentExecutionMonth = int.Parse(PaymentExecutionDate.Split('/')[1]);
                             var paymentExecutionYear = int.Parse(PaymentExecutionDate.Split('/')[2]);
                             DateTime dateExecutionConvert = new DateTime(paymentExecutionYear, paymentExecutionMonth, paymentExecutionday);
-                            if (dateExecutionConvert < DateTime.Now)
+                            if (dateExecutionConvert.Date < DateTime.Now.Date)
                             {
                                 MensajeError = string.Format("Fecha de Ejecución: {0} no puedo ser  menor a la actual", PaymentExecutionDate);
                                 return false;
@@ -316,7 +349,14 @@ namespace AplicacionNomina
                             MensajeError = string.Format("Descripción Código de Transacción no puede estar en blanco al igual que todas las informaciones del header");
                             return false;
                         }
-
+                        var transactionConvert = new CTransactionConvert();
+                        transactionConvert.Description = DescriptionCodeTrans.Trim();
+                        var transactionConvertResult = transactionConvert.cExistTransacctionDescription();
+                        if (!transactionConvertResult.IsValid)
+                        {
+                            MensajeError = string.Format("Descripción Código de Transacción no tiene un codigo asociado en las informaciones del header");
+                            return false;
+                        }
                     }
 
                     index++;
