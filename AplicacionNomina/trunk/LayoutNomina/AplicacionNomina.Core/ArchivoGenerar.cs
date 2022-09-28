@@ -91,7 +91,7 @@ namespace AplicacionNomina
 
             archivo.Total = montoTotal;
             archivo.AsignarCabecera(totalRegistros, montoTotal, moneda, DescriptionDebit, DescriptionCodeTrans, AccountOfDebit, PaymentExecutionDate);
-            archivo.AsignarPie(totalRegistros, montoTotal);
+            //archivo.AsignarPie(totalRegistros, montoTotal);
             return archivo;
         }
 
@@ -299,6 +299,7 @@ namespace AplicacionNomina
             var monto = string.Empty;
             if (monto.Length < 12)
             {
+                //debo considerar los ceros.
                 monto = drow[5].ToString().PadLeft(12, '0');
             }
 

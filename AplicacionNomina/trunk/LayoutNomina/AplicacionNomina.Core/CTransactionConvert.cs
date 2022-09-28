@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace AplicacionNomina
 {
@@ -64,14 +65,27 @@ namespace AplicacionNomina
         /// </summary>
         /// <param name="Description">Nombre del banco</param>
         /// <returns></returns>
-        public stResultReturn cExistTransacctionDescription()
+        public async Task<stResultReturn> cExistTransacctionDescription()
         {
             var result = new stResultReturn();
 
             try
             {
-                using (var context = new BANESCO_DEVEntities())
+                var appConfig = new CCallApi();
+
+
+                var Response = await appConfig.GetApiManagerParams();
+
+
+                //"metadata=res://*/PayRollModel.csdl|res://*/PayRollModel.ssdl|res://*/PayRollModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=10.3.10.7\\inst01;initial catalog=BANESCO_DEV;user id=usr_laynomdev;password=6M&amp;j4cxHP@Kn7EF4H2bc;MultipleActiveResultSets=True;App=EntityFramework&quot;" api
+                //var connectionString = "metadata=res://*/PayRollModel.csdl|res://*/PayRollModel.ssdl|res://*/PayRollModel.msl;provider=System.Data.SqlClient;provider connection string=\"data source=10.3.10.7\\inst01;initial catalog=BANESCO_DEV;user id=usr_laynomdev;password=6M&j4cxHP@Kn7EF4H2bc;MultipleActiveResultSets=True;App=EntityFramework\""; //tomado desde el webconfig y funcionó
+                //var connectionString = "metadata=res://*/PayRollModel.csdl|res://*/PayRollModel.ssdl|res://*/PayRollModel.msl;provider=System.Data.SqlClient;provider connection string=\"data source=10.3.10.7\\inst01;initial catalog=BANESCO_DEV;user id=usr_laynomdev;password=6M&j4cxHP@Kn7EF4H2bc;MultipleActiveResultSets=True;App=EntityFramework\"";
+
+                
+                using (var context = new BANESCO_DEVEntities(CCallApi.ConnString))
                 {
+                    // 
+                    
                     var IndicatorExist = context.TransactionConverts.Any(a => a.Description.Trim() == Description.Trim());
                     if (IndicatorExist)
                     {

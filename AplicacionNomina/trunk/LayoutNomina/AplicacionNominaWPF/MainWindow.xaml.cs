@@ -106,7 +106,7 @@ namespace AplicacionNominaWPF
 
             _dt = ReadExcelFast.ReadExcel(rutaInput);
             _dt.Rows.RemoveAt(0);
-            if (!validar.Validar(_dt, _moneda))
+            if (!validar.Validarbk(_dt, _moneda))
             {
                 _mensajeError = validar.MensajeError;
                 _resultado = ResultadoProcesarAsync.Invalido;

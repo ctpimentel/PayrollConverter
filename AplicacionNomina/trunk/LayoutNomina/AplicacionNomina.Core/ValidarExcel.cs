@@ -7,6 +7,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 
 namespace AplicacionNomina
 {
@@ -83,7 +84,7 @@ namespace AplicacionNomina
             return true;
         }
 
-        public bool Validar(DataTable dt, string moneda)
+        public async Task<bool> Validar(DataTable dt, string moneda)
         {
 
             var limiteCaracteresCuenta = int.Parse(ConfigurationManager.AppSettings["limiteCaracteresCuenta"]);
@@ -351,7 +352,7 @@ namespace AplicacionNomina
                         }
                         var transactionConvert = new CTransactionConvert();
                         transactionConvert.Description = DescriptionCodeTrans.Trim();
-                        var transactionConvertResult = transactionConvert.cExistTransacctionDescription();
+                        var transactionConvertResult = await transactionConvert.cExistTransacctionDescription();
                         if (!transactionConvertResult.IsValid)
                         {
                             MensajeError = string.Format("Descripción Código de Transacción no tiene un codigo asociado en las informaciones del header");
@@ -363,7 +364,7 @@ namespace AplicacionNomina
                 }
 
             }
-            return true;
+            return  true;
         }
 
         private bool ValidarCodigoBanco(long codigoBanco, string moneda)

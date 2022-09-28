@@ -62,7 +62,8 @@ namespace AplicacionNomina
 
             try
             {
-                using (var context = new BANESCO_DEVEntities())
+
+                using (var context = new BANESCO_DEVEntities(CCallApi.ConnString))
                 {
                     var LBTRobj = context.RedLBTRs.Where(a => a.BankName.Trim() == Description.Trim()).FirstOrDefault();
                     if (LBTRobj != null)
@@ -146,8 +147,9 @@ namespace AplicacionNomina
 
             try
             {
-                using (var context = new BANESCO_DEVEntities())
+                using (var context = new BANESCO_DEVEntities(CCallApi.ConnString))
                 {
+                     //context.Database.Connection.ConnectionString="";
                     var ACHObj = context.RedACHes.Where(a => a.Entidad.Trim() == Description.Trim()).FirstOrDefault();
                     if (ACHObj!=null)
                     {

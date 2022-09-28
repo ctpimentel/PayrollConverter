@@ -46,15 +46,9 @@
           <Property Name="RegUser" Type="varchar" MaxLength="90" Nullable="false" />
           <Property Name="RegDate" Type="datetime" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'BANESCO_DEV.dbo.TransactionConvert' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="TransactionConvert">
           <Key>
             <PropertyRef Name="Id" />
-            <PropertyRef Name="Code" />
-            <PropertyRef Name="Description" />
-            <PropertyRef Name="RegUser" />
-            <PropertyRef Name="RegDate" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Code" Type="varchar" MaxLength="200" Nullable="false" />
@@ -67,15 +61,7 @@ warning 6002: The table/view 'BANESCO_DEV.dbo.TransactionConvert' does not have 
           <EntitySet Name="IndicatorBank" EntityType="Self.IndicatorBank" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="RedACH" EntityType="Self.RedACH" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="RedLBTR" EntityType="Self.RedLBTR" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="TransactionConvert" EntityType="Self.TransactionConvert" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [TransactionConvert].[Id] AS [Id], 
-    [TransactionConvert].[Code] AS [Code], 
-    [TransactionConvert].[Description] AS [Description], 
-    [TransactionConvert].[RegUser] AS [RegUser], 
-    [TransactionConvert].[RegDate] AS [RegDate]
-    FROM [dbo].[TransactionConvert] AS [TransactionConvert]</DefiningQuery>
-          </EntitySet>
+          <EntitySet Name="TransactionConvert" EntityType="Self.TransactionConvert" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -132,10 +118,6 @@ warning 6002: The table/view 'BANESCO_DEV.dbo.TransactionConvert' does not have 
         <EntityType Name="TransactionConvert">
           <Key>
             <PropertyRef Name="Id" />
-            <PropertyRef Name="Code" />
-            <PropertyRef Name="Description" />
-            <PropertyRef Name="RegUser" />
-            <PropertyRef Name="RegDate" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Code" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />

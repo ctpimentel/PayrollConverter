@@ -9,6 +9,7 @@
 
 namespace AplicacionNomina.Core
 {
+    
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
@@ -24,7 +25,8 @@ namespace AplicacionNomina.Core
         {
             throw new UnintentionalCodeFirstException();
         }
-    
+
+        
         public virtual DbSet<RedACH> RedACHes { get; set; }
         public virtual DbSet<RedLBTR> RedLBTRs { get; set; }
         public virtual DbSet<IndicatorBank> IndicatorBanks { get; set; }

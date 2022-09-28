@@ -47,13 +47,15 @@ namespace AplicacionNomina
             }
         }
 
-        private void Procesar(string rutaInput)
+        private async void  Procesar(string rutaInput)
         {
             ValidarExcel validar = new ValidarExcel();
             string moneda = ((KeyValuePair<string, string>)ddlMoneda.SelectedItem).Value;
             var dt = ReadExcelFast.ReadExcel(rutaInput);
             dt.Rows.RemoveAt(0);
-            if (!validar.Validar(dt, moneda))
+
+            var resultvalidate = await validar.Validar(dt, moneda);
+            if (!resultvalidate)
             {
                 MessageBox.Show(validar.MensajeError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;

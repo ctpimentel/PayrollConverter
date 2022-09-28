@@ -51,10 +51,6 @@
   <EntityType Name="TransactionConvert">
     <Key>
       <PropertyRef Name="Id" />
-      <PropertyRef Name="Code" />
-      <PropertyRef Name="Description" />
-      <PropertyRef Name="RegUser" />
-      <PropertyRef Name="RegDate" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Code" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
