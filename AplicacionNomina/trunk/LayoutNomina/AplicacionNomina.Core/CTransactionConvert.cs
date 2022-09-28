@@ -24,7 +24,7 @@ namespace AplicacionNomina
 
             try
             {
-                using (var context = new BANESCO_DEVEntities())
+                using (var context = new BANESCO_DEVEntities(CCallApi.ConnString))
                 {
                     var TransactionConvertObj = context.TransactionConverts.Where(a => a.Description.Trim() == this.Description.Trim()).FirstOrDefault();
                     if (TransactionConvertObj != null)

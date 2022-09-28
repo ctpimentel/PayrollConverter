@@ -80,7 +80,8 @@ namespace AplicacionNomina
 
             try
             {
-                using (var context = new BANESCO_DEVEntities())
+                
+                using (var context = new BANESCO_DEVEntities(CCallApi.ConnString))
                 {
                     var IndicatorObj = context.IndicatorBanks.Where(a => a.IndicatorName.Trim() == Description.Trim()).FirstOrDefault();
                     if (IndicatorObj != null)
