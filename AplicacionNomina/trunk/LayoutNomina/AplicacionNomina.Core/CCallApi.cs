@@ -8,7 +8,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AplicacionNomina.Core
+namespace AplicacionNomina
 {
     public class CConection
     {
@@ -32,11 +32,11 @@ namespace AplicacionNomina.Core
         [JsonProperty("connections")]
         public List<CConection> connection { get; set; }
         [JsonProperty("params")]
-        public List<CParam> Params { get; set; }
+        public  List<CParam> Params { get; set; }
     }
     public class CCallApi
     {
-
+        public static List<CParam> Params { get; set; }
         private static string pConnString = "";
         public static string ConnString
 
@@ -50,7 +50,8 @@ namespace AplicacionNomina.Core
             var appConfig = new CAppConfig();
 
             try
-            {
+            {                
+
                 var config = ConfigurationManager.AppSettings;
                 var endpointFinal = config["Endpoint"];
                 var token = config["token"];
@@ -85,6 +86,7 @@ namespace AplicacionNomina.Core
 
 
                             CCallApi.ConnString = appConfig.connection.FirstOrDefault().connectionString;
+                            CCallApi.Params = appConfig.Params;
                         }
                     }
                 }

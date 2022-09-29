@@ -31,7 +31,7 @@ namespace AplicacionNomina
             foreach (DataRow drow in dt.Rows)
             {
                 montoTotal += decimal.Parse(drow[4].ToString());
-                archivo.AsignarDetalle(drow, moneda);
+                archivo.AsignarDetallebk(drow, moneda);
             }
 
             archivo.Total = montoTotal;
@@ -48,11 +48,19 @@ namespace AplicacionNomina
 
             var index = 0;
 
-            var HeaderFirstIndex = int.Parse(ConfigurationManager.AppSettings["HeaderFirstIndex"]);
-            var HeaderSecond = int.Parse(ConfigurationManager.AppSettings["HeaderSecond"]);
-            var HeaderThird = int.Parse(ConfigurationManager.AppSettings["HeaderThird"]);
-            var HeaderFourth = int.Parse(ConfigurationManager.AppSettings["HeaderFourth"]);
+            //var HeaderFirstIndex = int.Parse(ConfigurationManager.AppSettings["HeaderFirstIndex"]);
+            //var HeaderSecond = int.Parse(ConfigurationManager.AppSettings["HeaderSecond"]);
+            //var HeaderThird = int.Parse(ConfigurationManager.AppSettings["HeaderThird"]);
+            //var HeaderFourth = int.Parse(ConfigurationManager.AppSettings["HeaderFourth"]);
 
+
+
+
+
+            var HeaderFirstIndex = int.Parse(CCallApi.Params.Where(w => w.reference == "HeaderFirstIndex").FirstOrDefault().paramValue);
+            var HeaderSecond = int.Parse(CCallApi.Params.Where(w => w.reference == "HeaderSecond").FirstOrDefault().paramValue);
+            var HeaderThird = int.Parse(CCallApi.Params.Where(w => w.reference == "HeaderThird").FirstOrDefault().paramValue);
+            var HeaderFourth = int.Parse(CCallApi.Params.Where(w => w.reference == "HeaderFourth").FirstOrDefault().paramValue);
 
             var AccountOfDebit = string.Empty;
             var PaymentExecutionDate = string.Empty;
@@ -145,7 +153,7 @@ namespace AplicacionNomina
             {
                 //llamar log
             }
-            
+
 
             if (AccountOfDebit.Length < 12)
             {
@@ -299,8 +307,19 @@ namespace AplicacionNomina
             var monto = string.Empty;
             if (monto.Length < 12)
             {
-                //debo considerar los ceros.
-                monto = drow[5].ToString().PadLeft(12, '0');
+                //Validamos que si tiene un . es porque vino decimal de lo contrario agregaremos el .00 tal cual acordamos
+                if (drow[5].ToString().Contains("."))
+                {
+
+                    monto = drow[5].ToString().Replace(".", "").PadLeft(12, '0');
+                }
+                else
+                {
+                    StringBuilder sbAmount = new StringBuilder(drow[5].ToString());
+                    sbAmount.Append("00");
+                    monto = sbAmount.ToString().PadLeft(12, '0');
+
+                }
             }
 
             var identification = drow[6].ToString();
@@ -344,11 +363,11 @@ namespace AplicacionNomina
                 nombreCliente, numeroCuenta, accountType.Code.Trim(), codigoBanco, monto, identification, DescriptionCredit, Email, Phone);
 
             //string nombreBanco = ObtenerNombreDeLBanco(codigoBancoConDigitoDeChequeoLong);
-            //var registroIndividual = new SummaryItem();
-            //registroIndividual.Banco = nombreBanco;
-            //registroIndividual.Empleados = 1;
-            //registroIndividual.Monto = Decimal.Parse(drow[4].ToString());
-            //registrosIndividuales.Add(registroIndividual);
+            var registroIndividual = new SummaryItem();
+            registroIndividual.Banco = DescriptionEntity;
+            registroIndividual.Empleados = 1;
+            registroIndividual.Monto = Decimal.Parse(drow[5].ToString());
+            registrosIndividuales.Add(registroIndividual);
 
             Detalle.Add(detalle);
 

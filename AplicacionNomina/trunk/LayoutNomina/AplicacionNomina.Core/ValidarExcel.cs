@@ -86,16 +86,39 @@ namespace AplicacionNomina
 
         public async Task<bool> Validar(DataTable dt, string moneda)
         {
+            var appConfig = new CCallApi();
 
-            var limiteCaracteresCuenta = int.Parse(ConfigurationManager.AppSettings["limiteCaracteresCuenta"]);
-            var limiteCaracteresNombreCliente = int.Parse(ConfigurationManager.AppSettings["limiteCaracteresNombreCliente"]);
+            var Response = await appConfig.GetApiManagerParams();
+            if (string.IsNullOrEmpty(CCallApi.ConnString))
+            {
+                MensajeError = string.Format("No se pudo encontrar el parametro de conección  de la aplicación para poder procesar este archivo");
+                return false;
+            }
 
-            var montoLimite = decimal.Parse(ConfigurationManager.AppSettings["montoLimite"]);
+            if (CCallApi.Params == null || CCallApi.Params.Count < 1)
+            {
+                MensajeError = string.Format("No se pudo encontrar los parametros iniciales de la aplicación para poder procesar este archivo");
+            }
 
-            var HeaderFirstIndex = int.Parse(ConfigurationManager.AppSettings["HeaderFirstIndex"]);
-            var HeaderSecond = int.Parse(ConfigurationManager.AppSettings["HeaderSecond"]);
-            var HeaderThird = int.Parse(ConfigurationManager.AppSettings["HeaderThird"]);
-            var HeaderFourth = int.Parse(ConfigurationManager.AppSettings["HeaderFourth"]);
+            //var limiteCaracteresCuenta = int.Parse(ConfigurationManager.AppSettings["limiteCaracteresCuenta"]);
+            //var limiteCaracteresNombreCliente = int.Parse(ConfigurationManager.AppSettings["limiteCaracteresNombreCliente"]);
+
+            //var montoLimite = decimal.Parse(ConfigurationManager.AppSettings["montoLimite"]);
+
+            //var HeaderFirstIndextest = int.Parse(ConfigurationManager.AppSettings["HeaderFirstIndex"]);            
+            //var HeaderSecondtest = int.Parse(ConfigurationManager.AppSettings["HeaderSecond"]);
+            //var HeaderThirdtest = int.Parse(ConfigurationManager.AppSettings["HeaderThird"]);
+            //var HeaderFourthtest = int.Parse(ConfigurationManager.AppSettings["HeaderFourth"]);
+
+
+            var limiteCaracteresCuenta = int.Parse(CCallApi.Params.Where(w => w.reference == "limiteCaracteresCuenta").FirstOrDefault().paramValue);
+            var limiteCaracteresNombreCliente = int.Parse(CCallApi.Params.Where(w => w.reference == "limiteCaracteresNombreCliente").FirstOrDefault().paramValue);
+
+            var montoLimite = decimal.Parse(CCallApi.Params.Where(w => w.reference == "montoLimite").FirstOrDefault().paramValue);
+            var HeaderFirstIndex = int.Parse(CCallApi.Params.Where(w => w.reference == "HeaderFirstIndex").FirstOrDefault().paramValue);
+            var HeaderSecond = int.Parse(CCallApi.Params.Where(w => w.reference == "HeaderSecond").FirstOrDefault().paramValue);
+            var HeaderThird = int.Parse(CCallApi.Params.Where(w => w.reference == "HeaderThird").FirstOrDefault().paramValue);
+            var HeaderFourth = int.Parse(CCallApi.Params.Where(w => w.reference == "HeaderFourth").FirstOrDefault().paramValue);
             //var montoLimite = decimal.Parse(limitamount);
             //int limiteCaracteresCuenta = 17;
             //int limiteCaracteresNombreCliente = 30;
@@ -364,7 +387,7 @@ namespace AplicacionNomina
                 }
 
             }
-            return  true;
+            return true;
         }
 
         private bool ValidarCodigoBanco(long codigoBanco, string moneda)

@@ -74,7 +74,7 @@ namespace AplicacionNomina
                 var appConfig = new CCallApi();
 
 
-                var Response = await appConfig.GetApiManagerParams();
+                //var Response = await appConfig.GetApiManagerParams();
 
 
                 //"metadata=res://*/PayRollModel.csdl|res://*/PayRollModel.ssdl|res://*/PayRollModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=10.3.10.7\\inst01;initial catalog=BANESCO_DEV;user id=usr_laynomdev;password=6M&amp;j4cxHP@Kn7EF4H2bc;MultipleActiveResultSets=True;App=EntityFramework&quot;" api

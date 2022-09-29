@@ -100,8 +100,25 @@ namespace AplicacionNominaWPF
             ListSummary.Items.Add(summaryTotal);
         }
 
-        private void ProcesarAsync(object sender, DoWorkEventArgs e)
+        private  void ProcesarAsync(object sender, DoWorkEventArgs e)
         {           
+            ValidarExcel validar = new ValidarExcel();
+
+            _dt = ReadExcelFast.ReadExcel(rutaInput);
+            _dt.Rows.RemoveAt(0);
+            var resultvalidate =  validar.Validar(_dt, _moneda);
+            if (!resultvalidate.Result)
+            {
+                _mensajeError = validar.MensajeError;
+                _resultado = ResultadoProcesarAsync.Invalido;
+                return;
+            }
+
+            _resultado = ResultadoProcesarAsync.Exitoso;
+            
+        }
+        private void ProcesarAsyncbk(object sender, DoWorkEventArgs e)
+        {
             ValidarExcel validar = new ValidarExcel();
 
             _dt = ReadExcelFast.ReadExcel(rutaInput);
@@ -114,9 +131,8 @@ namespace AplicacionNominaWPF
             }
 
             _resultado = ResultadoProcesarAsync.Exitoso;
-            
+
         }
-               
         private void btnCargarNomina_Click_1(object sender, RoutedEventArgs e)
         {
             Limpiar();
@@ -179,7 +195,7 @@ namespace AplicacionNominaWPF
             {
                 using (StreamWriter sw = new StreamWriter(RutaSeleccionada))
                 {
-                    sw.Write(_archivoAGenerar.ToString());
+                    sw.Write(_archivoAGenerar.ToString().Trim());
                     sw.Flush();
                 }
 

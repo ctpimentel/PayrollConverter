@@ -53,6 +53,23 @@ C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNom
 C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\EntityFramework.dll
 C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\AplicacionNomina.Core.dll.config
 C:\Developer\Repositories\Convertidor De Nomina\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\EntityFramework.xml
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\AplicacionNominaWPF.exe.config
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\AplicacionNominaWPF.exe.manifest
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\AplicacionNominaWPF.application
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\AplicacionNominaWPF.exe
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\AplicacionNominaWPF.pdb
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\AplicacionNomina.Core.dll
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\EntityFramework.dll
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\EntityFramework.SqlServer.dll
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\Newtonsoft.Json.dll
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\WpfAnimatedGif.dll
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\AplicacionNomina.Core.pdb
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\AplicacionNomina.Core.dll.config
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\EntityFramework.xml
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\EntityFramework.SqlServer.xml
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\Newtonsoft.Json.xml
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\WpfAnimatedGif.xml
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\AplicacionNominaWPF.csprojAssemblyReference.cache
 C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\CustomPopup.baml
 C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\MainWindow.baml
 C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\App.baml
@@ -64,23 +81,8 @@ C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\La
 C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\AplicacionNominaWPF.Properties.Resources.resources
 C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\AplicacionNominaWPF.csproj.GenerateResource.cache
 C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\AplicacionNominaWPF.csproj.CoreCompileInputs.cache
-C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\AplicacionNominaWPF.csprojAssemblyReference.cache
-C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\AplicacionNominaWPF.exe.config
-C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\AplicacionNominaWPF.exe.manifest
-C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\AplicacionNominaWPF.application
-C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\AplicacionNominaWPF.exe
-C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\AplicacionNominaWPF.pdb
-C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\AplicacionNomina.Core.dll
-C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\WpfAnimatedGif.dll
-C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\EntityFramework.dll
-C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\AplicacionNomina.Core.pdb
-C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\AplicacionNomina.Core.dll.config
-C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\WpfAnimatedGif.xml
-C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\EntityFramework.xml
 C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\AplicacionNominaWPF.exe.manifest
 C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\AplicacionNominaWPF.application
 C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\AplicacionNominaWPF.csproj.CopyComplete
 C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\AplicacionNominaWPF.exe
 C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\AplicacionNominaWPF.pdb
-C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\Newtonsoft.Json.dll
-C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\Newtonsoft.Json.xml

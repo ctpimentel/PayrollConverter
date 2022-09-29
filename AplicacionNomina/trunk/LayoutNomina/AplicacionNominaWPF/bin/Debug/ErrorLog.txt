@@ -1,0 +1,28 @@
+9/29/2022 1:59:02 PM - Exception: Value cannot be null.
+Parameter name: source; StackStrace:    at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at AplicacionNomina.ArchivoAGenerar.ObtenerArchivoAGenerar(String moneda, DataTable dt) in C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNomina.Core\ArchivoGenerar.cs:line 60
+   at AplicacionNominaWPF.MainWindow.ProcesarCompleted(Object sender, RunWorkerCompletedEventArgs e) in C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\MainWindow.xaml.cs:line 66
+   at System.ComponentModel.BackgroundWorker.OnRunWorkerCompleted(RunWorkerCompletedEventArgs e)
+   at System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   at System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)
+9/29/2022 1:59:02 PM - Base Exception Exception: Value cannot be null.
+Parameter name: source; StackStrace:    at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at AplicacionNomina.ArchivoAGenerar.ObtenerArchivoAGenerar(String moneda, DataTable dt) in C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNomina.Core\ArchivoGenerar.cs:line 60
+   at AplicacionNominaWPF.MainWindow.ProcesarCompleted(Object sender, RunWorkerCompletedEventArgs e) in C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\MainWindow.xaml.cs:line 66
+   at System.ComponentModel.BackgroundWorker.OnRunWorkerCompleted(RunWorkerCompletedEventArgs e)
+   at System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   at System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)
+9/29/2022 2:01:35 PM - Exception: Value cannot be null.
+Parameter name: source; StackStrace:    at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at AplicacionNomina.ArchivoAGenerar.ObtenerArchivoAGenerar(String moneda, DataTable dt) in C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNomina.Core\ArchivoGenerar.cs:line 60
+   at AplicacionNominaWPF.MainWindow.ProcesarCompleted(Object sender, RunWorkerCompletedEventArgs e) in C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\MainWindow.xaml.cs:line 66
+   at System.ComponentModel.BackgroundWorker.OnRunWorkerCompleted(RunWorkerCompletedEventArgs e)
+   at System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   at System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)
+9/29/2022 2:01:35 PM - Base Exception Exception: Value cannot be null.
+Parameter name: source; StackStrace:    at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at AplicacionNomina.ArchivoAGenerar.ObtenerArchivoAGenerar(String moneda, DataTable dt) in C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNomina.Core\ArchivoGenerar.cs:line 60
+   at AplicacionNominaWPF.MainWindow.ProcesarCompleted(Object sender, RunWorkerCompletedEventArgs e) in C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\MainWindow.xaml.cs:line 66
+   at System.ComponentModel.BackgroundWorker.OnRunWorkerCompleted(RunWorkerCompletedEventArgs e)
+   at System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   at System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)
