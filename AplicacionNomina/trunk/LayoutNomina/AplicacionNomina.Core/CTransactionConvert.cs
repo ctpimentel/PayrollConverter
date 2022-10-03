@@ -24,7 +24,8 @@ namespace AplicacionNomina
 
             try
             {
-                using (var context = new BANESCO_DEVEntities(CCallApi.ConnString))
+                //using (var context = new BANESCO_DEVEntities(CCallApi.ConnString))
+                using (var context = new BANESCO_DEVEntities())
                 {
                     var TransactionConvertObj = context.TransactionConverts.Where(a => a.Description.Trim() == this.Description.Trim()).FirstOrDefault();
                     if (TransactionConvertObj != null)
@@ -81,8 +82,9 @@ namespace AplicacionNomina
                 //var connectionString = "metadata=res://*/PayRollModel.csdl|res://*/PayRollModel.ssdl|res://*/PayRollModel.msl;provider=System.Data.SqlClient;provider connection string=\"data source=10.3.10.7\\inst01;initial catalog=BANESCO_DEV;user id=usr_laynomdev;password=6M&j4cxHP@Kn7EF4H2bc;MultipleActiveResultSets=True;App=EntityFramework\""; //tomado desde el webconfig y funcionó
                 //var connectionString = "metadata=res://*/PayRollModel.csdl|res://*/PayRollModel.ssdl|res://*/PayRollModel.msl;provider=System.Data.SqlClient;provider connection string=\"data source=10.3.10.7\\inst01;initial catalog=BANESCO_DEV;user id=usr_laynomdev;password=6M&j4cxHP@Kn7EF4H2bc;MultipleActiveResultSets=True;App=EntityFramework\"";
 
-                
-                using (var context = new BANESCO_DEVEntities(CCallApi.ConnString))
+
+                //using (var context = new BANESCO_DEVEntities(CCallApi.ConnString))
+                using (var context = new BANESCO_DEVEntities())
                 {
                     // 
                     
@@ -110,6 +112,8 @@ namespace AplicacionNomina
                 result.IsValid = false;
                 result.Mensaje = innerMessage;
 
+                //var appConfig = new CCallApi();
+                //appConfig.insertToLogApi(result.Mensaje);
             }
             return result;
         }

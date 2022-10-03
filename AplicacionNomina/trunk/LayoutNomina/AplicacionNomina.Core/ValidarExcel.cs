@@ -86,39 +86,40 @@ namespace AplicacionNomina
 
         public async Task<bool> Validar(DataTable dt, string moneda)
         {
-            var appConfig = new CCallApi();
-            appConfig.insertToLogApi();
-            var Response = await appConfig.GetApiManagerParams();
-            if (string.IsNullOrEmpty(CCallApi.ConnString))
-            {
-                MensajeError = string.Format("No se pudo encontrar el parametro de conección  de la aplicación para poder procesar este archivo");
-                return false;
-            }
+            //var appConfig = new CCallApi();
+            //var Response = await appConfig.GetApiManagerParams();
+            //if (string.IsNullOrEmpty(CCallApi.ConnString))
+            //{
+            //    MensajeError = string.Format("No se pudo encontrar el parametro de conección  de la aplicación para poder procesar este archivo");
+            //    return false;
+            //}
 
-            if (CCallApi.Params == null || CCallApi.Params.Count < 1)
-            {
-                MensajeError = string.Format("No se pudo encontrar los parametros iniciales de la aplicación para poder procesar este archivo");
-            }
+            //if (CCallApi.Params == null || CCallApi.Params.Count < 1)
+            //{
+            //    MensajeError = string.Format("No se pudo encontrar los parametros iniciales de la aplicación para poder procesar este archivo");
+            //}
 
-            //var limiteCaracteresCuenta = int.Parse(ConfigurationManager.AppSettings["limiteCaracteresCuenta"]);
-            //var limiteCaracteresNombreCliente = int.Parse(ConfigurationManager.AppSettings["limiteCaracteresNombreCliente"]);
+            var limiteCaracteresCuenta = int.Parse(ConfigurationManager.AppSettings["limiteCaracteresCuenta"]);
+            var limiteCaracteresNombreCliente = int.Parse(ConfigurationManager.AppSettings["limiteCaracteresNombreCliente"]);
 
-            //var montoLimite = decimal.Parse(ConfigurationManager.AppSettings["montoLimite"]);
+            var montoLimite = decimal.Parse(ConfigurationManager.AppSettings["montoLimite"]);
 
-            //var HeaderFirstIndextest = int.Parse(ConfigurationManager.AppSettings["HeaderFirstIndex"]);            
-            //var HeaderSecondtest = int.Parse(ConfigurationManager.AppSettings["HeaderSecond"]);
-            //var HeaderThirdtest = int.Parse(ConfigurationManager.AppSettings["HeaderThird"]);
-            //var HeaderFourthtest = int.Parse(ConfigurationManager.AppSettings["HeaderFourth"]);
+            var HeaderFirstIndex = int.Parse(ConfigurationManager.AppSettings["HeaderFirstIndex"]);
+            var HeaderSecond = int.Parse(ConfigurationManager.AppSettings["HeaderSecond"]);
+            var HeaderThird = int.Parse(ConfigurationManager.AppSettings["HeaderThird"]);
+            var HeaderFourth = int.Parse(ConfigurationManager.AppSettings["HeaderFourth"]);
 
-            
-            var limiteCaracteresCuenta = int.Parse(CCallApi.Params.Where(w => w.reference == "limiteCaracteresCuenta").FirstOrDefault().paramValue);
-            var limiteCaracteresNombreCliente = int.Parse(CCallApi.Params.Where(w => w.reference == "limiteCaracteresNombreCliente").FirstOrDefault().paramValue);
 
-            var montoLimite = decimal.Parse(CCallApi.Params.Where(w => w.reference == "montoLimite").FirstOrDefault().paramValue);
-            var HeaderFirstIndex = int.Parse(CCallApi.Params.Where(w => w.reference == "HeaderFirstIndex").FirstOrDefault().paramValue);
-            var HeaderSecond = int.Parse(CCallApi.Params.Where(w => w.reference == "HeaderSecond").FirstOrDefault().paramValue);
-            var HeaderThird = int.Parse(CCallApi.Params.Where(w => w.reference == "HeaderThird").FirstOrDefault().paramValue);
-            var HeaderFourth = int.Parse(CCallApi.Params.Where(w => w.reference == "HeaderFourth").FirstOrDefault().paramValue);
+            //var limiteCaracteresCuenta = int.Parse(CCallApi.Params.Where(w => w.reference == "limiteCaracteresCuenta").FirstOrDefault().paramValue);
+            //var limiteCaracteresNombreCliente = int.Parse(CCallApi.Params.Where(w => w.reference == "limiteCaracteresNombreCliente").FirstOrDefault().paramValue);
+
+            //var montoLimite = decimal.Parse(CCallApi.Params.Where(w => w.reference == "montoLimite").FirstOrDefault().paramValue);
+            //var HeaderFirstIndex = int.Parse(CCallApi.Params.Where(w => w.reference == "HeaderFirstIndex").FirstOrDefault().paramValue);
+            //var HeaderSecond = int.Parse(CCallApi.Params.Where(w => w.reference == "HeaderSecond").FirstOrDefault().paramValue);
+            //var HeaderThird = int.Parse(CCallApi.Params.Where(w => w.reference == "HeaderThird").FirstOrDefault().paramValue);
+            //var HeaderFourth = int.Parse(CCallApi.Params.Where(w => w.reference == "HeaderFourth").FirstOrDefault().paramValue);
+
+
             //var montoLimite = decimal.Parse(limitamount);
             //int limiteCaracteresCuenta = 17;
             //int limiteCaracteresNombreCliente = 30;
@@ -342,6 +343,9 @@ namespace AplicacionNomina
                             MensajeError = string.Format("Favor verificar la Fecha de Ejecución ya que al momento de evaluar la misma ha ocurrido un error ");
 
                             MensajeError = MensajeError + " " + exDate.Message + "===>" + innerMessage;
+
+                            //appConfig = new CCallApi();
+                            //appConfig.insertToLogApi(MensajeError);
                             return false;
                         }
                     }

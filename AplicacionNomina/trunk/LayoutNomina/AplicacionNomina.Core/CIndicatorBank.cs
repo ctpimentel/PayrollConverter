@@ -35,8 +35,9 @@ namespace AplicacionNomina
             {
                 //var connectionString = "metadata=res://*/PayRollModel.csdl|res://*/PayRollModel.ssdl|res://*/PayRollModel.msl;provider=System.Data.SqlClient;provider connection string=\"data source=10.3.10.7\\inst01;initial catalog=BANESCO_DEV;user id=usr_laynomdev;password=6M&j4cxHP@Kn7EF4H2bc;MultipleActiveResultSets=True;App=EntityFramework\"";
                 //var connectionString = ConfigurationManager.ConnectionStrings["BANESCO_DEVEntitiesprueba"].ConnectionString;
-                
-                using (var context = new BANESCO_DEVEntities(CCallApi.ConnString))
+
+                //using (var context = new BANESCO_DEVEntities(CCallApi.ConnString))
+                using (var context = new BANESCO_DEVEntities())
                 {
                     var IndicatorExist = context.IndicatorBanks.Any(a => a.IndicatorName.Trim() == Description.Trim());
                     if (IndicatorExist)
@@ -62,6 +63,8 @@ namespace AplicacionNomina
                 innerMessage = " Ha ocurrido un error con este banco destino " + Description + " " + ex.Message;
                 result.IsValid = false;
                 result.Mensaje = innerMessage;
+                //var appConfig = new CCallApi();
+                //appConfig.insertToLogApi(result.Mensaje);
 
             }
             return result;
@@ -80,8 +83,9 @@ namespace AplicacionNomina
 
             try
             {
-                
-                using (var context = new BANESCO_DEVEntities(CCallApi.ConnString))
+
+                //using (var context = new BANESCO_DEVEntities(CCallApi.ConnString))
+                using (var context = new BANESCO_DEVEntities())
                 {
                     var IndicatorObj = context.IndicatorBanks.Where(a => a.IndicatorName.Trim() == Description.Trim()).FirstOrDefault();
                     if (IndicatorObj != null)

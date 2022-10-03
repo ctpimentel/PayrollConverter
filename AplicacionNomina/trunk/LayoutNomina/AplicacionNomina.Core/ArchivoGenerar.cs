@@ -48,19 +48,19 @@ namespace AplicacionNomina
 
             var index = 0;
 
-            //var HeaderFirstIndex = int.Parse(ConfigurationManager.AppSettings["HeaderFirstIndex"]);
-            //var HeaderSecond = int.Parse(ConfigurationManager.AppSettings["HeaderSecond"]);
-            //var HeaderThird = int.Parse(ConfigurationManager.AppSettings["HeaderThird"]);
-            //var HeaderFourth = int.Parse(ConfigurationManager.AppSettings["HeaderFourth"]);
+            var HeaderFirstIndex = int.Parse(ConfigurationManager.AppSettings["HeaderFirstIndex"]);
+            var HeaderSecond = int.Parse(ConfigurationManager.AppSettings["HeaderSecond"]);
+            var HeaderThird = int.Parse(ConfigurationManager.AppSettings["HeaderThird"]);
+            var HeaderFourth = int.Parse(ConfigurationManager.AppSettings["HeaderFourth"]);
 
 
 
 
 
-            var HeaderFirstIndex = int.Parse(CCallApi.Params.Where(w => w.reference == "HeaderFirstIndex").FirstOrDefault().paramValue);
-            var HeaderSecond = int.Parse(CCallApi.Params.Where(w => w.reference == "HeaderSecond").FirstOrDefault().paramValue);
-            var HeaderThird = int.Parse(CCallApi.Params.Where(w => w.reference == "HeaderThird").FirstOrDefault().paramValue);
-            var HeaderFourth = int.Parse(CCallApi.Params.Where(w => w.reference == "HeaderFourth").FirstOrDefault().paramValue);
+            //var HeaderFirstIndex = int.Parse(CCallApi.Params.Where(w => w.reference == "HeaderFirstIndex").FirstOrDefault().paramValue);
+            //var HeaderSecond = int.Parse(CCallApi.Params.Where(w => w.reference == "HeaderSecond").FirstOrDefault().paramValue);
+            //var HeaderThird = int.Parse(CCallApi.Params.Where(w => w.reference == "HeaderThird").FirstOrDefault().paramValue);
+            //var HeaderFourth = int.Parse(CCallApi.Params.Where(w => w.reference == "HeaderFourth").FirstOrDefault().paramValue);
 
             var AccountOfDebit = string.Empty;
             var PaymentExecutionDate = string.Empty;

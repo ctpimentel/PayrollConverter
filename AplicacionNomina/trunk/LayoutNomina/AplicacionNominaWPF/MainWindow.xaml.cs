@@ -106,15 +106,39 @@ namespace AplicacionNominaWPF
 
             _dt = ReadExcelFast.ReadExcel(rutaInput);
             _dt.Rows.RemoveAt(0);
-            var resultvalidate =  validar.Validar(_dt, _moneda);
-            if (!resultvalidate.Result)
+            try
             {
-                _mensajeError = validar.MensajeError;
+                var resultvalidate = validar.Validar(_dt, _moneda);
+                if (!resultvalidate.Result)
+                {
+                    _mensajeError = validar.MensajeError;
+                    _resultado = ResultadoProcesarAsync.Invalido;
+                    return;
+                }
+
+                _resultado = ResultadoProcesarAsync.Exitoso;
+            }
+            catch (Exception ex)
+            {
+                var result = new stResultReturn();
+                var innerException = ex.InnerException;
+                var innerMessage = string.Empty;
+                if (innerException != null)
+                {
+                    innerMessage = innerException.Message;
+                }
+                innerMessage = " Ha ocurrido un error con este banco destino " + innerMessage + " " + ex.Message;
+                result.IsValid = false;
+                result.Mensaje = innerMessage;
+
+                //var appConfig = new CCallApi();
+                //appConfig.insertToLogApi(innerMessage);
+
+                _mensajeError = innerMessage;
                 _resultado = ResultadoProcesarAsync.Invalido;
                 return;
             }
-
-            _resultado = ResultadoProcesarAsync.Exitoso;
+            
             
         }
         private void ProcesarAsyncbk(object sender, DoWorkEventArgs e)

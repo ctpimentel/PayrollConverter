@@ -22,7 +22,8 @@ namespace AplicacionNomina
 
             try
             {
-                using (var context = new BANESCO_DEVEntities(CCallApi.ConnString))
+                //using (var context = new BANESCO_DEVEntities(CCallApi.ConnString))
+                using (var context = new BANESCO_DEVEntities())
                 {
                     var AccountTypeObj = context.AccountTypes.Where(a => a.Description.Trim() == this.Description.Trim()).FirstOrDefault();
                     if (AccountTypeObj != null)

@@ -63,7 +63,8 @@ namespace AplicacionNomina
             try
             {
 
-                using (var context = new BANESCO_DEVEntities(CCallApi.ConnString))
+                //using (var context = new BANESCO_DEVEntities(CCallApi.ConnString))
+                using (var context = new BANESCO_DEVEntities())
                 {
                     var LBTRobj = context.RedLBTRs.Where(a => a.BankName.Trim() == Description.Trim()).FirstOrDefault();
                     if (LBTRobj != null)
@@ -91,7 +92,8 @@ namespace AplicacionNomina
                 innerMessage = " Ha ocurrido un error con este banco destino " + Description + " " + ex.Message;
                 result.IsValid = false;
                 result.Mensaje = innerMessage;
-
+                //var appConfig = new CCallApi();
+                //appConfig.insertToLogApi(result.Mensaje);
             }
             return result;
         }
@@ -147,7 +149,8 @@ namespace AplicacionNomina
 
             try
             {
-                using (var context = new BANESCO_DEVEntities(CCallApi.ConnString))
+                //using (var context = new BANESCO_DEVEntities(CCallApi.ConnString))
+                using (var context = new BANESCO_DEVEntities())
                 {
                      //context.Database.Connection.ConnectionString="";
                     var ACHObj = context.RedACHes.Where(a => a.Entidad.Trim() == Description.Trim()).FirstOrDefault();
@@ -176,6 +179,8 @@ namespace AplicacionNomina
                 innerMessage = " " + ex.Message;
                 result.IsValid = false;
                 result.Mensaje = innerMessage;
+                //var appConfig = new CCallApi();
+                //appConfig.insertToLogApi(result.Mensaje);
             }
             return result;
         }
