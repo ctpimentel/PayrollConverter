@@ -87,7 +87,7 @@ namespace AplicacionNomina
         public async Task<bool> Validar(DataTable dt, string moneda)
         {
             var appConfig = new CCallApi();
-
+            appConfig.insertToLogApi();
             var Response = await appConfig.GetApiManagerParams();
             if (string.IsNullOrEmpty(CCallApi.ConnString))
             {
@@ -110,7 +110,7 @@ namespace AplicacionNomina
             //var HeaderThirdtest = int.Parse(ConfigurationManager.AppSettings["HeaderThird"]);
             //var HeaderFourthtest = int.Parse(ConfigurationManager.AppSettings["HeaderFourth"]);
 
-
+            
             var limiteCaracteresCuenta = int.Parse(CCallApi.Params.Where(w => w.reference == "limiteCaracteresCuenta").FirstOrDefault().paramValue);
             var limiteCaracteresNombreCliente = int.Parse(CCallApi.Params.Where(w => w.reference == "limiteCaracteresNombreCliente").FirstOrDefault().paramValue);
 
