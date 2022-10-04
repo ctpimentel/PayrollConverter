@@ -172,7 +172,7 @@ namespace AplicacionNomina
 
                     var DescriptionEntity = drow[3].ToString();
 
-                    if (string.IsNullOrEmpty(DescriptionEntity))
+                    if (string.IsNullOrEmpty(DescriptionEntity) && channelType != enChannelType.BBanesco.ToString())
                     {
                         // Existe un monto que no es un número válido.
                         MensajeError = string.Format("Banco Destino no puedee estar en blanco ,favor revisar");
@@ -326,11 +326,11 @@ namespace AplicacionNomina
                             var paymentExecutionMonth = int.Parse(PaymentExecutionDate.Split('/')[1]);
                             var paymentExecutionYear = int.Parse(PaymentExecutionDate.Split('/')[2]);
                             DateTime dateExecutionConvert = new DateTime(paymentExecutionYear, paymentExecutionMonth, paymentExecutionday);
-                            //if (dateExecutionConvert.Date < DateTime.Now.Date)
-                            //{
-                            //    MensajeError = string.Format("Fecha de Ejecución: {0} no puedo ser  menor a la actual", PaymentExecutionDate);
-                            //    return false;
-                            //}
+                            if (dateExecutionConvert.Date < DateTime.Now.Date)
+                            {
+                                MensajeError = string.Format("Fecha de Ejecución: {0} no puedo ser  menor a la actual", PaymentExecutionDate);
+                                return false;
+                            }
                         }
                         catch (Exception exDate)
                         {

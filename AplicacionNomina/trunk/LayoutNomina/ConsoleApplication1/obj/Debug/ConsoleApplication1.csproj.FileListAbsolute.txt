@@ -15,3 +15,4 @@ C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\La
 C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.CoreCompileInputs.cache
 C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
 C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.AssemblyReference.cache

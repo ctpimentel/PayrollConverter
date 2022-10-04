@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AplicacionNomina.Core.dll" size="67072">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AplicacionNomina.Core.dll" size="67584">
       <assemblyIdentity name="AplicacionNomina.Core" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>9AlsI0rKiPGQyYom9xfaHs+vTJTskrZ5gmqvTwKncSk=</dsig:DigestValue>
+        <dsig:DigestValue>aqki22kd+R0YmkpfloadgjzkmcboZErfdxlS9yA1f/g=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -61,7 +61,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>gudLyDvxpopXwnHnKzIvtnbZOnvtq0U7j5Q2gA0Kehs=</dsig:DigestValue>
+        <dsig:DigestValue>p0XYuOcbKKKU5+lUt82gpekj+h/FVAOrDYrwv9g3r3s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -113,13 +113,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="AplicacionNominaWPF.exe.config" size="4001">
+  <file name="AplicacionNominaWPF.exe.config" size="4015">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>SwnLIhxMUwzL8lWtbGL0hpzfw3Ro5zrdQLJBbDAHr2A=</dsig:DigestValue>
+      <dsig:DigestValue>+ZM/aJOwORqIGVC+mxdDWGnMEddyfsVnZJ9rs3K4BIo=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
