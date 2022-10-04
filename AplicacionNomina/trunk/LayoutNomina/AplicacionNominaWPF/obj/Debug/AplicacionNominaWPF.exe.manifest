@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AplicacionNomina.Core.dll" size="67584">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AplicacionNomina.Core.dll" size="67072">
       <assemblyIdentity name="AplicacionNomina.Core" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>z6j0DTxJM1sxhxz5eeb3+cccV2Hv08Zh6w2VrxKLq0k=</dsig:DigestValue>
+        <dsig:DigestValue>9AlsI0rKiPGQyYom9xfaHs+vTJTskrZ5gmqvTwKncSk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -61,7 +61,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Gm2USEOwTTU21c1lr2R/H3aQdr4BiBhbWyuVKu3K1FE=</dsig:DigestValue>
+        <dsig:DigestValue>gudLyDvxpopXwnHnKzIvtnbZOnvtq0U7j5Q2gA0Kehs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

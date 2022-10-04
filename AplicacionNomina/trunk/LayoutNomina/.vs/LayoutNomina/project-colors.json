@@ -20,7 +20,17 @@
       "ProjectGuid": "79995387-ef63-432c-99a2-fb8d47327714",
       "DisplayName": "ConsoleApplication1",
       "ColorIndex": 3
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "e2d74d9c-c1f7-4cc2-adfd-be71f5669896": {
+      "ProjectGuid": "e2d74d9c-c1f7-4cc2-adfd-be71f5669896",
+      "DisplayName": "layoutNomina",
+      "ColorIndex": 4
     }
   },
-  "NextColorIndex": 4
+  "NextColorIndex": 5
 }

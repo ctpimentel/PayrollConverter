@@ -69,7 +69,8 @@ C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\La
 C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\EntityFramework.SqlServer.xml
 C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\Newtonsoft.Json.xml
 C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\bin\Debug\WpfAnimatedGif.xml
-C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\AplicacionNominaWPF.csprojAssemblyReference.cache
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\AplicacionNominaWPF.csproj.AssemblyReference.cache
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\AplicacionNominaWPF.csproj.SuggestedBindingRedirects.cache
 C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\CustomPopup.baml
 C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\MainWindow.baml
 C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\obj\Debug\App.baml

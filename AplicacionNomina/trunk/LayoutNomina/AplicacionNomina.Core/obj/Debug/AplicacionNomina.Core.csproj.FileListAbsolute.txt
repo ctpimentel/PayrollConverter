@@ -29,4 +29,4 @@ C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\La
 C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNomina.Core\obj\Debug\AplicacionNomina.Core.csproj.CopyComplete
 C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNomina.Core\obj\Debug\AplicacionNomina.Core.dll
 C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNomina.Core\obj\Debug\AplicacionNomina.Core.pdb
-C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNomina.Core\obj\Debug\AplicacionNomina.Core.csprojAssemblyReference.cache
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNomina.Core\obj\Debug\AplicacionNomina.Core.csproj.AssemblyReference.cache

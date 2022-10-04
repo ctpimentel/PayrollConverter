@@ -326,11 +326,11 @@ namespace AplicacionNomina
                             var paymentExecutionMonth = int.Parse(PaymentExecutionDate.Split('/')[1]);
                             var paymentExecutionYear = int.Parse(PaymentExecutionDate.Split('/')[2]);
                             DateTime dateExecutionConvert = new DateTime(paymentExecutionYear, paymentExecutionMonth, paymentExecutionday);
-                            if (dateExecutionConvert.Date < DateTime.Now.Date)
-                            {
-                                MensajeError = string.Format("Fecha de Ejecución: {0} no puedo ser  menor a la actual", PaymentExecutionDate);
-                                return false;
-                            }
+                            //if (dateExecutionConvert.Date < DateTime.Now.Date)
+                            //{
+                            //    MensajeError = string.Format("Fecha de Ejecución: {0} no puedo ser  menor a la actual", PaymentExecutionDate);
+                            //    return false;
+                            //}
                         }
                         catch (Exception exDate)
                         {

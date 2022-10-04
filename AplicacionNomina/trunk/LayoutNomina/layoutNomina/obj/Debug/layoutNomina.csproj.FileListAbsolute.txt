@@ -1,0 +1,11 @@
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\layoutNomina\bin\Debug\layoutNomina.vsix
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\layoutNomina\bin\Debug\extension.vsixmanifest
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\layoutNomina\obj\Debug\layoutNomina.csproj.AssemblyReference.cache
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\layoutNomina\obj\Debug\_EmptyResource.resources
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\layoutNomina\obj\Debug\layoutNomina.csproj.GenerateResource.cache
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\layoutNomina\obj\Debug\layoutNomina.csproj.CoreCompileInputs.cache
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\layoutNomina\obj\Debug\layoutNomina.dll
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\layoutNomina\obj\Debug\layoutNomina.pdb
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\layoutNomina\obj\Debug\extension.vsixmanifest
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\layoutNomina\obj\Debug\files.json
+C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\layoutNomina\obj\Debug\createTemplateManifests.cache
