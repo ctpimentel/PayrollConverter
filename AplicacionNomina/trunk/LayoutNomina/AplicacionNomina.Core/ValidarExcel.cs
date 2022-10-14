@@ -25,10 +25,23 @@ namespace AplicacionNomina
             foreach (DataRow drow in dt.Rows)
             {
                 decimal monto;
+
+                if (string.IsNullOrEmpty(drow[4].ToString()))
+                {
+                    // Existe un monto que no es un número válido.
+                    MensajeError = string.Format("El monto  no puede estar en blanco ");
+                    return false;
+                }
                 if (!decimal.TryParse(drow[4].ToString(), out monto))
                 {
                     // Existe un monto que no es un número válido.
                     MensajeError = string.Format("El monto {0} no tiene formato correcto", drow[4].ToString());
+                    return false;
+                }
+                if (monto <= 0)
+                {
+                    // Existe un monto que no es un número válido.
+                    MensajeError = string.Format("El monto debe ser mayor que cero");
                     return false;
                 }
 
@@ -131,6 +144,13 @@ namespace AplicacionNomina
                 if (index > 4)
                 {
                     decimal monto;
+
+                    var montoAmountstring = drow[5].ToString();
+                    if (string.IsNullOrEmpty(montoAmountstring)) 
+                    {
+                        MensajeError = string.Format("El campo monto no puede estar en blanco ");
+                        return false;
+                    }
                     if (!decimal.TryParse(drow[5].ToString(), out monto))
                     {
                         // Existe un monto que no es un número válido.
@@ -139,11 +159,10 @@ namespace AplicacionNomina
                     }
                     var channelType = drow[2].ToString().Trim();
 
-
                     if (string.IsNullOrEmpty(channelType))
                     {
                         // Existe un monto que no es un número válido.
-                        MensajeError = string.Format("Indicador de Banco   {0} no puede estar en blanco", channelType);
+                        MensajeError = string.Format("Indicador de banco no puede estar en blanco ");
                         return false;
                     }
                     //var identification = drow[6].ToString();
@@ -165,7 +184,7 @@ namespace AplicacionNomina
                     var accountTypeResult = indicatorBank.cExistIndicatorDescription(channelType);
                     if (!accountTypeResult.IsValid)
                     {
-                        MensajeError = string.Format("Favor verificar este  Indicador de Banco   {0} tiene formato incorrecto", channelType + " detalle: " + accountTypeResult.Mensaje);
+                        MensajeError = string.Format("Favor verificar este indicador de banco {0} tiene formato incorrecto", channelType + " detalle: " + accountTypeResult.Mensaje);
                         return false;
                     }
                     channelType = channelType.Replace("-", "");
@@ -175,14 +194,14 @@ namespace AplicacionNomina
                     if (string.IsNullOrEmpty(DescriptionEntity) && channelType != enChannelType.BBanesco.ToString())
                     {
                         // Existe un monto que no es un número válido.
-                        MensajeError = string.Format("Banco Destino no puedee estar en blanco ,favor revisar");
+                        MensajeError = string.Format("Banco destino no puedee estar en blanco ,favor revisar");
                         return false;
                     }
                     if (channelType == enChannelType.LLBTR.ToString() || channelType == enChannelType.AACH.ToString())
                     {
                         if (channelType == channelTypeEnumValue && moneda != enCurrency.DOP.ToString())
                         {
-                            MensajeError = string.Format("No puede seleccionar un tipo de moneda distinto a DOP para el indicador {0}  ", drow[2].ToString().Trim().Replace("-", ""));
+                            MensajeError = string.Format("No puede seleccionar un tipo de moneda distinto a dop para el indicador ACH ");
                             return false;
                         }
 
@@ -192,14 +211,14 @@ namespace AplicacionNomina
                             var resultlbtr = payRollValidate.cGetLBTRDescription(DescriptionEntity);
                             if (!resultlbtr.IsValid)
                             {
-                                MensajeError = string.Format("Favor verificar este  Banco Destino   {0} tiene formato incorrecto", DescriptionEntity + " detalle: " + resultlbtr.Mensaje);
+                                MensajeError = string.Format("Favor verificar este banco destino {0} tiene formato incorrecto", DescriptionEntity + " detalle: " + resultlbtr.Mensaje);
                                 return false;
                             }
                             else
                             {
                                 if (resultlbtr.Mensaje.Length > 12)
                                 {
-                                    MensajeError = string.Format("El codigo swift asociado a este  Banco Destino   {0} tiene formato incorrecto", DescriptionEntity + " es mayor de 12 posiciones, favor arreglar: " + resultlbtr.Mensaje);
+                                    MensajeError = string.Format("El codigo swift asociado a este banco destino {0} tiene formato incorrecto", DescriptionEntity + " es mayor de 12 posiciones, favor arreglar: " + resultlbtr.Mensaje);
                                     return false;
                                 }
 
@@ -210,14 +229,14 @@ namespace AplicacionNomina
                             var resultlbtr = payRollValidate.cGetACHDescription(DescriptionEntity);
                             if (!resultlbtr.IsValid)
                             {
-                                MensajeError = string.Format("Favor verificar este  Banco Destino   {0} tiene formato incorrecto", DescriptionEntity + " detalle: " + resultlbtr.Mensaje);
+                                MensajeError = string.Format("Favor verificar este banco destino {0} tiene formato incorrecto", DescriptionEntity + " detalle: " + resultlbtr.Mensaje);
                                 return false;
                             }
                             else
                             {
                                 if (resultlbtr.Mensaje.Length > 12)
                                 {
-                                    MensajeError = string.Format("RUTA Y TRANSITO O DIGITO DE CHEQUEO asociado a este  Banco Destino   {0} tiene formato incorrecto", DescriptionEntity + " es mayor de 12 posiciones , el cual es {1}: " + resultlbtr.Mensaje);
+                                    MensajeError = string.Format("RUTA Y TRANSITO O DIGITO DE CHEQUEO asociado a este  banco destino {0} tiene formato incorrecto", DescriptionEntity + " es mayor de 12 posiciones , el cual es {1}: " + resultlbtr.Mensaje);
                                     return false;
                                 }
                             }
@@ -228,7 +247,7 @@ namespace AplicacionNomina
 
                     if (string.IsNullOrEmpty(numeroCuenta))
                     {
-                        MensajeError = string.Format("El No.de Cuenta Beneficiario  {0} no puede estar en blanco", numeroCuenta);
+                        MensajeError = string.Format("El no.de cuenta beneficiario no puede estar en blanco");
                         return false;
                     }
                     if (numeroCuenta.Length > limiteCaracteresCuenta)
@@ -238,7 +257,7 @@ namespace AplicacionNomina
                     }
                     if (!Regex.IsMatch(numeroCuenta.Trim(), @"^[a-zA-Z0-9]*$"))
                     {
-                        MensajeError = string.Format("El No.de Cuenta Beneficiario  {0} no puede tener caracteres especiales", numeroCuenta);
+                        MensajeError = string.Format("El no.de cuenta beneficiario {0} no puede tener caracteres especiales", numeroCuenta);
                         return false;
                     }
 
@@ -247,33 +266,37 @@ namespace AplicacionNomina
 
                     if (string.IsNullOrEmpty(nombreCliente))
                     {
-                        MensajeError = string.Format("El Nombre del Beneficiario  {0} no puede ser en blanco", nombreCliente);
+                        MensajeError = string.Format("El nombre del beneficiario  no puede estar en blanco ");
                         return false;
                     }
                     if (nombreCliente.Length > limiteCaracteresNombreCliente)
                     {
-                        MensajeError = string.Format("El Nombre del Beneficiario {0} excede el máximo permitido de caracteres", nombreCliente);
+                        MensajeError = string.Format("El nombre del beneficiario {0} excede el máximo permitido de caracteres", nombreCliente);
                         return false;
                     }
 
                     if (!Regex.IsMatch(nombreCliente.Trim(), @"^[a-zA-Z0-9\s]*$"))//FALTA TRABAJAR LO DEL UNDERSCORE QUITARLO
                     {
-                        MensajeError = string.Format("El Nombre del Beneficiario {0} no debe tener caracteres expeciales", nombreCliente);
+                        MensajeError = string.Format("El nombre del beneficiario {0} no debe tener caracteres expeciales", nombreCliente);
                         return false;
-
 
                     }
                     string tipoCuenta = drow[4].ToString();
 
                     if (string.IsNullOrEmpty(tipoCuenta))
                     {
-
-                        MensajeError = string.Format("Tipo Cuenta Destino no puede estar en blanco");
+                        MensajeError = string.Format("Tipo cuenta destino no puede estar en blanco");
                         return false;
                     }
-                    if (tipoCuenta.Trim() != enAccountType.Ahorro.ToString() && tipoCuenta.Trim() != enAccountType.Corriente.ToString() && tipoCuenta.Trim() != enAccountType.Préstamo.ToString() && tipoCuenta.Trim() != enAccountType.Tarjeta.ToString())
+                    if (tipoCuenta.Replace(" ", "").Trim() == enAccountType.Corriente.ToString() && moneda == enCurrency.USD.ToString())
                     {
-                        MensajeError = string.Format("Tipo Cuenta Destino debe ser igual a las establecidas en su momento y el digitado fue: {0} ", tipoCuenta);
+                        MensajeError = string.Format("No puede haber un tipo cuenta destino corriente  y seleccionar como moneda de conversión dólares");
+                        return false;
+
+                    }
+                    if (tipoCuenta.Replace(" ", "").Trim() != enAccountType.Ahorro.ToString() && tipoCuenta.Trim() != enAccountType.Corriente.ToString() && tipoCuenta.Trim() != enAccountType.Préstamo.ToString() && tipoCuenta.Replace(" ", "").Trim() != enAccountType.Tarjetadecrédito.ToString())
+                    {
+                        MensajeError = string.Format("Tipo cuenta destino debe ser igual a las establecidas en su momento y el digitado fue: {0} ", tipoCuenta);
                         return false;
                     }
                     if (monto < 1)
@@ -293,9 +316,9 @@ namespace AplicacionNomina
                     }
                     var identification = drow[6].ToString();
 
-                    if (string.IsNullOrEmpty(identification))
+                    if (string.IsNullOrEmpty(identification) && channelType != enChannelType.BBanesco.ToString())
                     {
-                        MensajeError = string.Format("La Identificación no puede estar en blanco");
+                        MensajeError = string.Format("La identificación no puede estar en blanco");
                         return false;
                     }
                 }
@@ -307,7 +330,7 @@ namespace AplicacionNomina
 
                         if (string.IsNullOrEmpty(AccountOfDebit))
                         {
-                            MensajeError = string.Format("Cuenta a Debitar no puede estar en blanco al igual que todas las informaciones del header");
+                            MensajeError = string.Format("Cuenta a debitar no puede estar en blanco al igual que todas las informaciones del header");
                             return false;
                         }
                     }
@@ -317,7 +340,7 @@ namespace AplicacionNomina
 
                         if (string.IsNullOrEmpty(PaymentExecutionDate))
                         {
-                            MensajeError = string.Format("Fecha de Ejecución no puede estar en blanco al igual que todas las informaciones del header");
+                            MensajeError = string.Format("Fecha de ejecución no puede estar en blanco al igual que todas las informaciones del header");
                             return false;
                         }
                         try
@@ -328,7 +351,7 @@ namespace AplicacionNomina
                             DateTime dateExecutionConvert = new DateTime(paymentExecutionYear, paymentExecutionMonth, paymentExecutionday);
                             if (dateExecutionConvert.Date < DateTime.Now.Date)
                             {
-                                MensajeError = string.Format("Fecha de Ejecución: {0} no puedo ser  menor a la actual", PaymentExecutionDate);
+                                MensajeError = string.Format("Fecha de ejecución: {0} no puedo ser  menor a la actual", PaymentExecutionDate);
                                 return false;
                             }
                         }
@@ -340,12 +363,10 @@ namespace AplicacionNomina
                             {
                                 innerMessage = innerException.Message;
                             }
-                            MensajeError = string.Format("Favor verificar la Fecha de Ejecución ya que al momento de evaluar la misma ha ocurrido un error ");
+                            MensajeError = string.Format("Favor verificar la fecha de ejecución ya que al momento de evaluar la misma ha ocurrido un error ");
 
                             MensajeError = MensajeError + " " + exDate.Message + "===>" + innerMessage;
-
-                            //appConfig = new CCallApi();
-                            //appConfig.insertToLogApi(MensajeError);
+                            
                             return false;
                         }
                     }
@@ -356,13 +377,13 @@ namespace AplicacionNomina
 
                         if (string.IsNullOrEmpty(DescriptionDebit))
                         {
-                            MensajeError = string.Format("Descripción del Débito no puede estar en blanco al igual que todas las informaciones del header");
+                            MensajeError = string.Format("Descripción del débito no puede estar en blanco al igual que todas las informaciones del header");
                             return false;
                         }
 
                         if (!Regex.IsMatch(DescriptionDebit.Trim(), @"^[a-zA-Z0-9\s]*$"))
                         {
-                            MensajeError = string.Format("Descripción del Débito no permite caracteres especiales al igual que todas las informaciones del header");
+                            MensajeError = string.Format("Descripción del débito no permite caracteres especiales al igual que todas las informaciones del header");
                             return false;
                         }
 
@@ -374,7 +395,7 @@ namespace AplicacionNomina
 
                         if (string.IsNullOrEmpty(DescriptionCodeTrans))
                         {
-                            MensajeError = string.Format("Descripción Código de Transacción no puede estar en blanco al igual que todas las informaciones del header");
+                            MensajeError = string.Format("Descripción código de transacción no puede estar en blanco al igual que todas las informaciones del header");
                             return false;
                         }
                         var transactionConvert = new CTransactionConvert();
@@ -382,7 +403,7 @@ namespace AplicacionNomina
                         var transactionConvertResult = await transactionConvert.cExistTransacctionDescription();
                         if (!transactionConvertResult.IsValid)
                         {
-                            MensajeError = string.Format("Descripción Código de Transacción no tiene un codigo asociado en las informaciones del header");
+                            MensajeError = string.Format("Descripción código de transacción no tiene un codigo asociado en las informaciones del header");
                             return false;
                         }
                     }

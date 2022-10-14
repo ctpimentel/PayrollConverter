@@ -375,6 +375,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_7EBA3803096942B2857CE7B913F312F9"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_7EDD8FFFDD15A8DD3484AE4857C471E6"
         "OwnerKey" = "8:_E01A64B14F2A4656BCF87D1D56ACA0A6"
         "MsmSig" = "8:_UNDEFINED"
@@ -645,6 +651,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_DD337315F89F46FBAA30B2BE124CAFD3"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_DFFDDA8F5AC16254966178092D75C075"
         "OwnerKey" = "8:_E01A64B14F2A4656BCF87D1D56ACA0A6"
         "MsmSig" = "8:_UNDEFINED"
@@ -749,12 +761,6 @@
         {
         "MsmKey" = "8:_FF253D843BA1F9B6CCEF784BE52F5FDE"
         "OwnerKey" = "8:_E01A64B14F2A4656BCF87D1D56ACA0A6"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_629C8C3C81DA645EA76D35E5F408E81C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -1447,6 +1453,12 @@
         "OwnerKey" = "8:_B71DF0B5280F4A5A730A0984E0C4AE73"
         "MsmSig" = "8:_UNDEFINED"
         }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_629C8C3C81DA645EA76D35E5F408E81C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
     }
     "Configurations"
     {
@@ -1465,6 +1477,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -1481,6 +1509,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -3277,6 +3321,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7EBA3803096942B2857CE7B913F312F9"
+            {
+            "SourcePath" = "8:..\\AplicacionNominaWPF\\Images\\logoBanescoColor.ico"
+            "TargetName" = "8:logoBanescoColor.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_CF936EB36E944B9EA7E0B4850A609A4A"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7EDD8FFFDD15A8DD3484AE4857C471E6"
             {
             "AssemblyRegister" = "3:1"
@@ -4548,6 +4612,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DD337315F89F46FBAA30B2BE124CAFD3"
+            {
+            "SourcePath" = "8:..\\AplicacionNominaWPF\\Images\\banesco mini logo.ico"
+            "TargetName" = "8:banesco mini logo.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_CF936EB36E944B9EA7E0B4850A609A4A"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_DFFDDA8F5AC16254966178092D75C075"
             {
             "AssemblyRegister" = "3:1"
@@ -5132,7 +5216,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Convertidor Nomina"
         "ProductCode" = "8:{106E7852-1E00-48EC-88C0-A6AF4BB0C527}"
-        "PackageCode" = "8:{B392E8CB-A8D6-4765-B7D7-FE1DE4BE926C}"
+        "PackageCode" = "8:{68BD68E5-50AA-426C-AE59-25BED62CCD82}"
         "UpgradeCode" = "8:{501844EC-182F-451C-A26E-CB8FB11D0759}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -5254,7 +5338,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_A6F875C805564ADC955A6257DCCFC869"
             {
-            "Name" = "8:AplicacionNominaWPF"
+            "Name" = "8:Convertidor de nóminas y proveedores"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -5263,7 +5347,7 @@
             "Target" = "8:_E01A64B14F2A4656BCF87D1D56ACA0A6"
             "Folder" = "8:_631410FBE9854B54A8A942CD2B07F6BC"
             "WorkingFolder" = "8:_CF936EB36E944B9EA7E0B4850A609A4A"
-            "Icon" = "8:"
+            "Icon" = "8:_7EBA3803096942B2857CE7B913F312F9"
             "Feature" = "8:"
             }
         }

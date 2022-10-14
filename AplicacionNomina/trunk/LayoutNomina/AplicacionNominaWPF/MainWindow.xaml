@@ -3,8 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Classic" x:Class="AplicacionNominaWPF.MainWindow"
         xmlns:gif="http://wpfanimatedgif.codeplex.com"
-        Height="390" Width="533.571" Icon="Images/logoBanescoColor.png" ResizeMode="CanMinimize" >
-
+        Height="400" Width="600" Icon="Images/logoBanescoColor.png" ResizeMode="CanMinimize" >
+    <!--Height="390" Width="533.571" Icon="Images/logoBanescoColor.png" ResizeMode="CanMinimize" >-->
     <Window.Resources>
 
 
@@ -209,7 +209,7 @@
         <ComboBox x:Name="ddlMoneda"  Margin="10,0,50,0"  Background="#D1D2D4" Grid.Column="0" Grid.Row="1" Text="Is not open" Style="{DynamicResource ComboBoxStyle1}">
 
             <ComboBoxItem Selector.IsSelected="True" x:Name="cbi1" Tag="DOP" Content="Peso Dominicano"/>
-            <ComboBoxItem x:Name="cbi2" Tag="USD" Content="Dolar"/>
+            <ComboBoxItem x:Name="cbi2" Tag="USD" Content="Dólares Americano"/>
         </ComboBox>
 
         <Button Grid.Row="1" Grid.Column="2" x:Name="btnCargarNomina" Click="btnCargarNomina_Click_1" Margin="10,0,50,0" >
@@ -219,14 +219,13 @@
         <Image x:Name="imgLoading" Visibility="Hidden" Grid.Column="0" Height="30" 
           Width="30" Grid.Row="2" gif:ImageBehavior.AnimatedSource="Images/loading.gif"
         Grid.ColumnSpan="1" Grid.RowSpan="1" Margin="10,0,211,0"></Image>
-
-        <ListView Grid.Row="3" Grid.ColumnSpan="2" Margin="10,0,50,0"   Name="ListSummary" ScrollViewer.VerticalScrollBarVisibility="Visible">
+        <ListView Grid.Row="3" Grid.ColumnSpan="2" Margin="10,0,0,0"   Name="ListSummary" ScrollViewer.VerticalScrollBarVisibility="Visible">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="#" Width="40" DisplayMemberBinding="{Binding Path=Number}" />
-                    <GridViewColumn Header="Entidad" Width="210" DisplayMemberBinding="{Binding Path=Banco}" />
-                    <GridViewColumn Header="Empleados" Width="80" DisplayMemberBinding="{Binding Path=Empleados}" />
-                    <GridViewColumn Header="Monto" Width="92" DisplayMemberBinding="{Binding Path=MontoString}" />
+                    <GridViewColumn Header="Entidad" Width="200" DisplayMemberBinding="{Binding Path=Banco}" />
+                    <GridViewColumn Header="Cantidad registros" Width="120" DisplayMemberBinding="{Binding Path=Empleados}" />
+                    <GridViewColumn Header="Monto" Width="87" DisplayMemberBinding="{Binding Path=MontoString}" />
                     <GridView.ColumnHeaderContainerStyle>
                         <Style TargetType="{x:Type GridViewColumnHeader}">
                             <Setter Property="IsEnabled" Value="False"/>
@@ -235,7 +234,6 @@
                 </GridView>
             </ListView.View>
         </ListView>
-
         <Button Grid.Row="5" IsEnabled="False" Grid.Column="0" x:Name="btnExportar" Click="btnExportar_Click_1" Margin="10,0,144,0" >
             <TextBlock Foreground="White"><Run Text="Exportar"/></TextBlock>
         </Button>

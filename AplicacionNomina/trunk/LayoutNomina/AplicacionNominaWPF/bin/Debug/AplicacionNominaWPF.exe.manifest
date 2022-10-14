@@ -42,26 +42,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AplicacionNomina.Core.dll" size="67584">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AplicacionNomina.Core.dll" size="69120">
       <assemblyIdentity name="AplicacionNomina.Core" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>rNbxYSmDSnHsUogIGdmju8KYf+2O2NUcNaUV5e+jo3k=</dsig:DigestValue>
+        <dsig:DigestValue>oAc7SvxP5WrCNJdPOfqZWXdfrqCeu5FsFhgjgm4jUQE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AplicacionNominaWPF.exe" size="118784">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AplicacionNominaWPF.exe" size="120320">
       <assemblyIdentity name="AplicacionNominaWPF" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>mpdPSAFKlU7Px/OOV9VWxwZkgTTXmpYyDZtnVpuOITk=</dsig:DigestValue>
+        <dsig:DigestValue>39TnhTfOqj0RGuAx7fDtLbafapgG83NgD0jifbYW4PM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -113,13 +113,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="AplicacionNominaWPF.exe.config" size="4015">
+  <file name="AplicacionNominaWPF.exe.config" size="4110">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>+ZM/aJOwORqIGVC+mxdDWGnMEddyfsVnZJ9rs3K4BIo=</dsig:DigestValue>
+      <dsig:DigestValue>d54iTnCvY28qSt1iRcPjkMDklvzvM6PWicrAXp6OmZY=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

@@ -11,7 +11,7 @@ namespace AplicacionNomina
     {
         Ahorro,
         Corriente,
-        Tarjeta,
+        Tarjetadecrédito,
         Préstamo
 
     }

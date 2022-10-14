@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            
+
             this.ofdCargarNomina = new System.Windows.Forms.OpenFileDialog();
             this.btnCargarNomina = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();

@@ -38,7 +38,7 @@ namespace AplicacionNominaWPF
 
         private IVersion _repoVersiones;
         BackgroundWorker bwProcesar;
-        
+
         private string _mensajePostValidacion = "Favor revise los detalles de su archivo antes de exportar";
         private string _headerExito = "Fin de Proceso";
         private string _mensajeSeleccionarExcel = "Seleccione un archivo de Excel";
@@ -64,15 +64,15 @@ namespace AplicacionNominaWPF
             if (_resultado == ResultadoProcesarAsync.Exitoso)
             {
                 _archivoAGenerar = ArchivoAGenerar.ObtenerArchivoAGenerar(_moneda, _dt);
-                EscribirSummaryEnGrid(_archivoAGenerar.ObtenerListadoAgregado());                
+                EscribirSummaryEnGrid(_archivoAGenerar.ObtenerListadoAgregado());
                 btnExportar.IsEnabled = true;
                 w.Message = _mensajePostValidacion;
                 w.Header = _headerExito;
                 w.Icono = Iconos.Exclamacion;
-                w.ShowDialog();                
+                w.ShowDialog();
             }
             else if (_resultado == ResultadoProcesarAsync.Invalido)
-            {                
+            {
                 w.Message = _mensajeError;
                 w.Header = _headerError;
                 w.Icono = Iconos.Error;
@@ -82,8 +82,51 @@ namespace AplicacionNominaWPF
             _dt = null;
         }
 
+        private void EscribirSummaryEnGridNEWBK(List<SummaryItem> listado)
+        {
+            var channelTypeList = new List<string>();
+            int index = 0;
+            foreach (var channelTypeITEM in listado.Select(s => s.ChannelType).Distinct().ToList())
+            {
+                if (!channelTypeList.Contains(channelTypeITEM))
+                {
+
+                    //listado[index].Number = (index + 1).ToString();
+                    ListSummary.Items.Add(new SummaryItem() { Banco = channelTypeITEM, Number = String.Empty, Empleados = 0 });
+                    channelTypeList.Add(channelTypeITEM);
+                }
+                //else
+                //{
+                //    listado[index].Number = (index + 1).ToString();
+                //}
+                foreach (var listItemSummary in listado.Where(W => W.ChannelType == channelTypeITEM).ToList())
+                {
+                    listItemSummary.Number = (index + 1).ToString();
+                    ListSummary.Items.Add(listItemSummary);
+                    index++;
+                }
+
+
+            }
+
+            //for (int i = 0; i < listado.Count; i++)
+            //{
+            //    ListSummary.Items.Add(listado[i]);
+
+            //}
+
+            var summaryTotal = new SummaryItem()
+            {
+                Number = "Total",
+                Banco = "",
+                Monto = listado.Sum(x => x.Monto),
+                Empleados = listado.Sum(x => x.Empleados)
+            };
+            ListSummary.Items.Add(summaryTotal);
+        }
         private void EscribirSummaryEnGrid(List<SummaryItem> listado)
         {
+
             for (int i = 0; i < listado.Count; i++)
             {
                 listado[i].Number = (i + 1).ToString();
@@ -99,9 +142,8 @@ namespace AplicacionNominaWPF
             };
             ListSummary.Items.Add(summaryTotal);
         }
-
-        private  void ProcesarAsync(object sender, DoWorkEventArgs e)
-        {           
+        private void ProcesarAsync(object sender, DoWorkEventArgs e)
+        {
             ValidarExcel validar = new ValidarExcel();
 
             _dt = ReadExcelFast.ReadExcel(rutaInput);
@@ -138,8 +180,8 @@ namespace AplicacionNominaWPF
                 _resultado = ResultadoProcesarAsync.Invalido;
                 return;
             }
-            
-            
+
+
         }
         private void ProcesarAsyncbk(object sender, DoWorkEventArgs e)
         {
@@ -161,7 +203,7 @@ namespace AplicacionNominaWPF
         {
             Limpiar();
             OpenFileDialog ofdCargarNomina = new OpenFileDialog();
-            
+
             ofdCargarNomina.FileName = string.Empty;
             ofdCargarNomina.Filter = "Excel files (*.xlsx, *.xls)|*.xlsx;*.xls|All files (*.*)|*.*";
 
@@ -173,12 +215,12 @@ namespace AplicacionNominaWPF
             if (resultTentativo.HasValue)
             {
                 result = resultTentativo.Value;
-            }           
+            }
 
             if (result)
             {
                 rutaInput = ofdCargarNomina.FileName;
-                _moneda =((ComboBoxItem)ddlMoneda.SelectedValue).Tag.ToString();
+                _moneda = ((ComboBoxItem)ddlMoneda.SelectedValue).Tag.ToString();
                 bwProcesar.RunWorkerAsync();
             }
             else
@@ -219,7 +261,8 @@ namespace AplicacionNominaWPF
             {
                 using (StreamWriter sw = new StreamWriter(RutaSeleccionada))
                 {
-                    sw.Write(_archivoAGenerar.ToString().Trim());
+                    //sw.Write(_archivoAGenerar.ToString().Trim());
+                    sw.Write(_archivoAGenerar.ToString());
                     sw.Flush();
                 }
 
@@ -232,5 +275,5 @@ namespace AplicacionNominaWPF
         }
     }
 
-    
+
 }

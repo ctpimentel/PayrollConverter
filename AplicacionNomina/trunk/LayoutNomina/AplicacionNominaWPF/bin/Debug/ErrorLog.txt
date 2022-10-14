@@ -26,3 +26,27 @@ Parameter name: source; StackStrace:    at System.Linq.Enumerable.Where[TSource]
    at System.ComponentModel.BackgroundWorker.OnRunWorkerCompleted(RunWorkerCompletedEventArgs e)
    at System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
    at System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)
+10/10/2022 3:45:28 PM - Exception: Object reference not set to an instance of an object.; StackStrace:    at AplicacionNomina.ArchivoAGenerar.AsignarDetalle(DataRow drow, String moneda)
+   at AplicacionNomina.ArchivoAGenerar.ObtenerArchivoAGenerar(String moneda, DataTable dt)
+   at AplicacionNominaWPF.MainWindow.ProcesarCompleted(Object sender, RunWorkerCompletedEventArgs e) in C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\MainWindow.xaml.cs:line 66
+   at System.ComponentModel.BackgroundWorker.OnRunWorkerCompleted(RunWorkerCompletedEventArgs e)
+   at System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   at System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)
+10/10/2022 3:45:28 PM - Base Exception Exception: Object reference not set to an instance of an object.; StackStrace:    at AplicacionNomina.ArchivoAGenerar.AsignarDetalle(DataRow drow, String moneda)
+   at AplicacionNomina.ArchivoAGenerar.ObtenerArchivoAGenerar(String moneda, DataTable dt)
+   at AplicacionNominaWPF.MainWindow.ProcesarCompleted(Object sender, RunWorkerCompletedEventArgs e) in C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\MainWindow.xaml.cs:line 66
+   at System.ComponentModel.BackgroundWorker.OnRunWorkerCompleted(RunWorkerCompletedEventArgs e)
+   at System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   at System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)
+10/10/2022 4:55:59 PM - Exception: Object reference not set to an instance of an object.; StackStrace:    at AplicacionNomina.ArchivoAGenerar.AsignarDetalle(DataRow drow, String moneda) in C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNomina.Core\ArchivoGenerar.cs:line 362
+   at AplicacionNomina.ArchivoAGenerar.ObtenerArchivoAGenerar(String moneda, DataTable dt) in C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNomina.Core\ArchivoGenerar.cs:line 75
+   at AplicacionNominaWPF.MainWindow.ProcesarCompleted(Object sender, RunWorkerCompletedEventArgs e) in C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\MainWindow.xaml.cs:line 66
+   at System.ComponentModel.BackgroundWorker.OnRunWorkerCompleted(RunWorkerCompletedEventArgs e)
+   at System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   at System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)
+10/10/2022 4:55:59 PM - Base Exception Exception: Object reference not set to an instance of an object.; StackStrace:    at AplicacionNomina.ArchivoAGenerar.AsignarDetalle(DataRow drow, String moneda) in C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNomina.Core\ArchivoGenerar.cs:line 362
+   at AplicacionNomina.ArchivoAGenerar.ObtenerArchivoAGenerar(String moneda, DataTable dt) in C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNomina.Core\ArchivoGenerar.cs:line 75
+   at AplicacionNominaWPF.MainWindow.ProcesarCompleted(Object sender, RunWorkerCompletedEventArgs e) in C:\Developer\GitHub\ConvertidorNomina\PayrollConverter\AplicacionNomina\trunk\LayoutNomina\AplicacionNominaWPF\MainWindow.xaml.cs:line 66
+   at System.ComponentModel.BackgroundWorker.OnRunWorkerCompleted(RunWorkerCompletedEventArgs e)
+   at System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   at System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)

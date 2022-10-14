@@ -72,7 +72,7 @@ namespace AplicacionNomina
 
             try
             {
-               // var appConfig = new CCallApi();
+                // var appConfig = new CCallApi();
 
 
                 //var Response = await appConfig.GetApiManagerParams();

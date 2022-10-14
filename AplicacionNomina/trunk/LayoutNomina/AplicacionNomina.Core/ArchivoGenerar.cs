@@ -112,11 +112,24 @@ namespace AplicacionNomina
         {
             var sb = new StringBuilder();
             sb.AppendLine(Cabecera);
+            var detalleCount = Detalle.Count();
+            var IndexCurrent = 0;
             foreach (var detalle in Detalle)
             {
-                sb.AppendLine(detalle);
+
+                if (IndexCurrent == detalleCount - 1)
+                {
+                    sb.Append(detalle);
+                }
+                else
+                {
+                    sb.AppendLine(detalle);
+                }
+
+                IndexCurrent++;
+
             }
-            sb.Append(Pie);
+            //sb.Append(Pie);
             return sb.ToString();
         }
 
@@ -271,7 +284,10 @@ namespace AplicacionNomina
             var channelTypeEnumValue = enChannelType.AACH.ToString();
             var codigoBanco = string.Empty;
 
-
+            if (channelType == enChannelType.BBanesco.ToString())
+            {
+                DescriptionEntity = ConfigurationManager.AppSettings["BanescoEntity"].ToString();
+            }
             if (channelType == enChannelType.LLBTR.ToString() || channelType == enChannelType.AACH.ToString())
             {
                 var payRollValidate = new CPayRollValidate();
@@ -367,6 +383,7 @@ namespace AplicacionNomina
             registroIndividual.Banco = DescriptionEntity;
             registroIndividual.Empleados = 1;
             registroIndividual.Monto = Decimal.Parse(drow[5].ToString());
+            registroIndividual.ChannelType = channelType;
             registrosIndividuales.Add(registroIndividual);
 
             Detalle.Add(detalle);
@@ -409,7 +426,8 @@ namespace AplicacionNomina
                     Banco = x.FirstOrDefault().Banco,
                     Empleados = x.Count(),
                     Monto = x.Sum(y => y.Monto),
-                    Number = "1"
+                    Number = "1",
+                    ChannelType = x.FirstOrDefault().ChannelType,
                 }).ToList();
 
             return agregado;
@@ -427,7 +445,6 @@ namespace AplicacionNomina
                 // Cuenta de ahorros
                 return "S";
             }
-
             // Cuenta Corriente
             return "C";
         }
@@ -439,7 +456,6 @@ namespace AplicacionNomina
                 // C = cuenta de banesco
                 return "C";
             }
-
             // A = ACH
             return "A";
         }
