@@ -236,7 +236,7 @@ namespace AplicacionNomina
                             {
                                 if (resultlbtr.Mensaje.Length > 12)
                                 {
-                                    MensajeError = string.Format("RUTA Y TRANSITO O DIGITO DE CHEQUEO asociado a este  banco destino {0} tiene formato incorrecto", DescriptionEntity + " es mayor de 12 posiciones , el cual es {1}: " + resultlbtr.Mensaje);
+                                    MensajeError = string.Format("Ruta y tránsito O dígito de chequeo asociado a este  banco destino {0} tiene formato incorrecto", DescriptionEntity + " es mayor de 12 posiciones , el cual es {1}: " + resultlbtr.Mensaje);
                                     return false;
                                 }
                             }
