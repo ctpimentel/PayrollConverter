@@ -185,9 +185,9 @@
 
     </Window.Resources>
 
-    <Grid Margin="0" VerticalAlignment="Top" HorizontalAlignment="Left" ShowGridLines="False" Width="525" Height="350">
+    <Grid Margin="0" VerticalAlignment="Top" HorizontalAlignment="Left" ShowGridLines="False" Width="580" Height="350">
         <Grid.Background>
-            <ImageBrush ImageSource="Images/nomina.png">
+            <ImageBrush ImageSource="Images/nomina.png"  >
 
             </ImageBrush>
         </Grid.Background>

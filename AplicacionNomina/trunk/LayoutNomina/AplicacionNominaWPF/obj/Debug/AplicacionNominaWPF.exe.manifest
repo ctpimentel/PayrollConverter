@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AplicacionNominaWPF.exe" size="120320">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AplicacionNominaWPF.exe" size="302080">
       <assemblyIdentity name="AplicacionNominaWPF" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>mexs1lH2ydpKS/Bav+bv4KXNvGcDj9c40N24z/uUkas=</dsig:DigestValue>
+        <dsig:DigestValue>wJNL8Ag7+rViR8O+qezB/T5ENaLsKJg4xw1vCL9gRDU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
